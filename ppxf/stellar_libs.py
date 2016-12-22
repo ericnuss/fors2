@@ -31,7 +31,7 @@ def load_bc03_library(wave=None, velscale=None, FWHM_gal=1, version='N'):
             full_data = np.empty((nAges, nMetal), dtype=object)
             if wave is not None:
                 templates = np.empty((wave.size, nAges, nMetal))
-                FWHM_tem = 1 # this number is crap as the spectra are synthetic in part...
+                FWHM_tem = 0 # this number is crap as the spectra are synthetic in part...
                 FWHM_dif = np.sqrt(FWHM_gal**2 - FWHM_tem**2)
                 sigma = FWHM_dif/2.355/np.diff(lam)[0] # Sigma difference in pixels
 
