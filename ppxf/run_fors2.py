@@ -52,7 +52,7 @@ def make_plot(pp,
         plt.savefig(save)
 
 if __name__ == "__main__":
-    TYPE = "Brown"
+    TYPE = "Fors2"
     MASK_MIN = 1000
     MASK_MAX = 15800
 #    MASK_MIN = 3200
@@ -89,14 +89,17 @@ if __name__ == "__main__":
             y = np.interp(x, wave, flux)
             flux, log_wave, velscale = util.log_rebin([x[0],x[-1]], y)
         else:    
-            flux, log_wave, velscale = util.log_rebin([wave[0],wave[-1]], flux)
+            step = np.diff(wave).min()
+            x = np.arange(wave[0], wave[-1], step)
+            y = np.interp(x, wave, flux)
+            flux, log_wave, velscale = util.log_rebin([x[0],x[-1]], y)
         wave = np.exp(log_wave)
                 
         galaxy = flux/np.median(flux)
 
         print 'velocity scale from the galaxy (after rebin): ',velscale
         #assume a constant noise level for spectrum
-        noise = galaxy*0 + 0.1
+        noise = galaxy*0.001 #+ 5.1
 
         #now load the stellar library, modifying it based on above info
         #MILES
@@ -108,7 +111,7 @@ if __name__ == "__main__":
             load_bc03_library(x, velscale*(0.9999), FWHM_gal=1, version='S')
         else:
             lam, full, full_data, logAge_grid, metal_grid, templates = \
-            load_bc03_library(t['wavelength'][mask], velscale, FWHM_gal=1, version='N')
+            load_bc03_library(x, velscale*(0.9999), FWHM_gal=0.1, version='S')
             
         lamRange_temp = [wave[0],wave[-1]]
         
@@ -123,6 +126,7 @@ if __name__ == "__main__":
 
         start = [c*np.log(1 + z), 0.01]#3*velscale]
         fixed = [True, True]#, False, False]
+        fixed = [False, False]
         print start
         
         pp = ppxf(templates, galaxy, noise, velscale, start,
@@ -172,7 +176,7 @@ if __name__ == "__main__":
         plt.savefig(os.path.join(outdir,title+'_full.png'))
                 
         pickle.dump(pp,open(os.path.join(outdir,title+'.pkl'), 'w'))
-        
+        np.savetxt(os.path.join(outdir,title+'_unreddened_sed.txt'), np.transpose([lam,pop_spectrum]), fmt=('%.1f','%.5e'), delimiter=' ', newline=os.linesep)
 
         # print('Mass-weighted <logAge> [Gyr]: %.3g' %
         #       (np.sum(pp.weights*logAge_grid.ravel())/np.sum(pp.weights)))
