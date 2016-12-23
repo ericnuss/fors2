@@ -126,3 +126,10 @@ def smooth_and_rebin(bc03, bc03_lambda, gal_lambda, velscale, FWHM_gal=1, FWHM_t
             smoothed_ssp = ndimage.gaussian_filter1d(new_ssp, sigma)
             templates[:, i, j] = smoothed_ssp
     return templates
+
+
+def plot_weights(weights, logAge_grid, metal_grid, nodots=False, colorbar=True, **kwargs):
+    xgrid = logAge_grid
+    ygrid = metal_grid
+    util.plot_weights_2d(xgrid, ygrid, weights,
+                             nodots=nodots, colorbar=colorbar, **kwargs)
