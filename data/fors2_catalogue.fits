@@ -1,0 +1,677 @@
+SIMPLE  =                    T / Standard FITS Format                           BITPIX  =                    8 / Character data                                 NAXIS   =                    0 / No Image --- just extension(s)                 EXTEND  =                    T / There are standard extensions                  ORIGIN  = 'xml2fits_v1.95'     / Converted from XML-Astrores to FITS                                     e-mail: question@simbad.u-strasbg.fr                   LONGSTRN= 'OGIP 1.0'           / Long string convention (&/CONTINUE) may be usedDATE    = '2016-11-14'         / Written on 2016-11-14:16:30:25 (GMT)                                        by: apache@vizier.u-strasbg.fr                              **********************************************************                          EXCERPT from catalogues stored in VizieR (CDS)                                             with the following conditions:                                   **********************************************************                                                                                                      VizieR Astronomical Server vizier.u-strasbg.fr                                  Date: 2016-11-14T16:30:25 [V1.99+ (14-Oct-2013)]                                In case of problem, please report to: cds-question@unistra.fr                                                                                          INFO    = 'votable-version=1.99+ (14-Oct-2013)' / #                             INFO    = '-ref=VIZ5829e67450a9' / #                                            INFO    = '-out.max=unlimited' / #                                              Q-PARAMS=                   25 / Number of queryParameters (followed by list)            -oc.form=dec                                                                    -out.max=unlimited                                                              #out.form=FITS (ascii) Table                                                    -out.all=2                                                                      -out.add=_r                                                                     -nav=cat:J/other/RAA/11.245&tab:{J/other/RAA/11.245/table5}&key:source=         J/other/RAA/11.245&HTTPPRM:&-out.add=_r&                                        -c.eq=J2000                                                                     -c.r= 2                                                                         -c.u=arcmin                                                                     -c.geom=r                                                                       -source=J/other/RAA/11.245/table5                                               -order=I                                                                        -out=ID                                                                         -out=m_ID                                                                       -out=RAJ2000                                                                    -out=DEJ2000                                                                    -out=z                                                                          -out=u_z                                                                        -out=Rmag                                                                       -out=RV                                                                         -out=e_RV                                                                       -out=RT                                                                         -out=Nsp                                                                        -out=Lines                                                                      -out.all=2                                                                      #                                                                               #RESOURCE=yCat_1040001104                                                       #Name: J/other/RAA/11.245                                                       #Title: Galaxies in the field of RX J0054.0-2823 (Giraud+, 2011)                #Coosys J2000: eq_FK5 J2000                                            END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             XTENSION= 'TABLE   '           / Ascii Table Extension (TAB and NEWLINE sep)    BITPIX  =                    8 / Character data                                 NAXIS   =                    2 / Simple 2-D matrix                              NAXIS1  =                  141 / Number of bytes per record                     NAXIS2  =                  676 / Number of records                              PCOUNT  =                    0 / Get rid of random parameters                   GCOUNT  =                    1 / Only one group (isn't it obvious?)             TFIELDS =                   12 / Number of data fields (columns)                CDS-CAT = 'J/other/RAA/11.245' / Catalogue designation in CDS nomenclature               Galaxies in the field of RX J0054.0-2823 (Giraud+, 2011)               EXTNAME = 'J_other_RAA_11_245_table5' / Identification of the table             CDS-NAME= 'J/other/RAA/11.245/table5' / Table name in METAtab                            Properties of the galaxies in the field of RX J0054.0-2823             TBCOL1  =                    2 / UCD=meta.number short: ....... offset=1        TFORM1  = 'I4      '           / Fortran Format                                 TTYPE1  = 'ID      '           / Running number of observed object (1)          TBCOL2  =                    7 / UCD=meta.code.multip char:1 .. offset=6        TFORM2  = 'A1      '           / Fortran Format                                 TTYPE2  = 'm_ID    '           / [b] Multiplicity index on ID                   TBCOL3  =                    9 / UCD=pos.eq.ra;meta.main double: offset=8       TFORM3  = 'F9.5    '           / Fortran Format                                 TTYPE3  = 'RAJ2000 '           / Right ascension in decimal degrees (J2000)     TUNIT3  = 'deg     '           / degree                                         TBCOL4  =                   19 / UCD=pos.eq.dec;meta.main double: offset=18     TFORM4  = 'F9.5    '           / Fortran Format                                 TTYPE4  = 'DEJ2000 '           / Declination in decimal degrees (J2000)         TUNIT4  = 'deg     '           / degree                                         TBCOL5  =                   29 / UCD=src.redshift float: ...... offset=28       TFORM5  = 'F7.5    '           / Fortran Format                                 TTYPE5  = 'z       '           / Redshift (2)                                   TBCOL6  =                   37 / UCD=meta.code.error;src.redshift c offset=36   TFORM6  = 'A1      '           / Fortran Format                                 TTYPE6  = 'u_z     '           / Uncertainty flag on z                          TBCOL7  =                   39 / UCD=phot.mag;em.opt.R float: . offset=38       TFORM7  = 'F5.2    '           / Fortran Format                                 TTYPE7  = 'Rmag    '           / ? Petrosian magnitude in R                     TUNIT7  = 'mag     '           / magnitude                                      TNULL7  = 'NaN     '           / NULL definition                                TBCOL8  =                   45 / UCD=phys.veloc;pos.heliocentric in offset=44   TFORM8  = 'I7      '           / Fortran Format                                 TTYPE8  = 'RV      '           / ? Radial velocity derived from                                                  cross-correlation [NULL integer written as an                                   empty string]                                  TUNIT8  = 'km/s    '           / kilometre per second                           TNULL8  = '-2147483648'        / NULL definition                                TBCOL9  =                   53 / UCD=stat.error short: ........ offset=52       TFORM9  = 'I4      '           / Fortran Format                                 TTYPE9  = 'e_RV    '           / ? rms uncertainty on RV (3) [NULL integer                                       written as an empty string]                    TUNIT9  = 'km/s    '           / kilometre per second                           TNULL9  = '-32768  '           / NULL definition                                TBCOL10 =                   58 / UCD=stat.fit.param float: .... offset=57       TFORM10 = 'F4.1    '           / Fortran Format                                 TTYPE10 = 'RT      '           / ? Tonry parameter (3)                          TNULL10 = 'NaN     '           / NULL definition                                TBCOL11 =                   63 / UCD=meta.number unsignedByte: offset=62        TFORM11 = 'I1      '           / Fortran Format                                 TTYPE11 = 'Nsp     '           / Number of independent spectra                  TBCOL12 =                   65 / UCD=meta.id;spect.line char:76* offset=64      TFORM12 = 'A76     '           / Fortran Format                                 TTYPE12 = 'Lines   '           / Lines used in determining z (4)                HISTORY File modified by user 'cohen' with fv  on 2017-03-30T09:37:50           HISTORY File modified by user 'cohen' with fv  on 2017-03-30T12:04:24           HISTORY File modified by user 'cohen' with fv  on 2017-03-30T12:52:04           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T20:12:23           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:10:28           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:11:22           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:15:32           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:49:34           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:52:32           HISTORY File modified by user 'cohen' with fv  on 2017-04-27T22:56:29           END                                                                             
+   1	 	013.52815	-28.40486	0.55409	 	20.79	 166227	  55	10.0	1	[OII],H8,K,H                                                                
+   2	 	013.52997	-28.44776	0.34555	 	21.18	 103665	  40	12.3	1	K,H,G,H{beta}                                                               
+   3	 	013.52552	-28.42080	0.70214	 	21.45	 210642	  48	11.6	4	[OII],H9,K,H,H{beta},[OIII]                                                 
+   4	 	013.52216	-28.40914	0.68653	 	21.62	 205959	 123	10.6	1	[OII],H9,K,H,G,H{beta}                                                      
+   7	 	013.50974	-28.42972	0.32371	 	22.34	  97111	  11	16.7	6	[OII],H{beta},[OIII],H{alpha}                                               
+   9	 	013.50219	-28.40641	0.29266	 	21.60	  87798	  58	13.1	1	H9,H8,K,H                                                                   
+  11	 	013.49724	-28.39487	0.62688	 	22.09	 188063	  17	24.3	3	[OII],H10,H8,K,H,H{delta}                                                   
+  12	 	013.49584	-28.39125	0.29730	 	21.97	  89189	  30	14.8	2	[OII],H10,H9,H8,K,H                                                         
+  13	 	013.49261	-28.38272	0.68870	 	23.14	 206610	    	    	1	[OII],H{epsilon},H{delta},H{beta}                                           
+  14	 	013.48952	-28.38469	1.15856	 	22.62	 347568	 192	 2.0	1	[OII],H9                                                                    
+  15	 	013.48880	-28.41684	0.63446	 	22.40	 190338	  26	17.2	2	[OII],H9,K,H,H{delta},H{beta},[OIII]                                        
+  16	 	013.48808	-28.43092	0.62986	 	22.29	 188958	  17	22.8	2	[OII],H,H{beta},[OIII]                                                      
+  17	 	013.48726	-28.43966	0.60331	 	23.40	 180993	  72	 6.2	1	[OII],H,H{beta},[OIII]                                                      
+  18	 	013.60897	-28.42091	0.48485	 	21.08	 145455	  72	16.2	1	H9,K,H,G                                                                    
+  19	 	013.60758	-28.43452	0.48395	 	21.70	 145185	 104	 7.1	1	H10,H9,H8,K,H,H{delta}                                                      
+  20	 	013.60055	-28.37773	0.44879	 	22.55	 134637	  27	16.1	1	[OII],K,H,H{beta},[OIII]                                                    
+  22	 	013.59428	-28.37475	0.60276	 	21.75	 180828	  18	24.6	1	[OII],K,H,H{beta},[OIII]                                                    
+  23	 	013.59871	-28.43496	0.79304	 	22.78	 237912	 161	 4.7	1	K,H,4000{AA}-break                                                          
+  24	 	013.59032	-28.37749	0.46612	 	21.77	 139836	 107	 6.2	1	[OII],HK,[OIII]                                                             
+  25	 	013.59405	-28.44029	0.44810	 	22.34	 134430	    	    	1	[OII],H,G,H{beta},[OIII]                                                    
+  26	 	013.59038	-28.41692	0.77636	 	22.24	 232908	  77	 8.1	1	[OII],H10,H9,H                                                              
+  27	 	013.58444	-28.39451	0.41463	 	22.29	 124389	  22	17.3	1	[OII],H9,H,H{beta},[OIII]                                                   
+  28	 	013.58663	-28.43806	0.44877	 	22.02	 134631	  73	 6.7	1	K,H,G,4000{AA}-break                                                        
+  30	 	013.58030	-28.43544	0.29032	 	21.08	  87096	  68	11.3	1	H9,K,H,H{delta},H{alpha}                                                    
+  31	 	013.57201	-28.38038	0.63267	 	21.32	 189801	  49	11.5	1	[OII],K,H                                                                   
+  32	 	013.57901	-28.43941	0.45335	 	     	 136005	  22	19.5	1	[OII],H{gamma},H{beta},[OIII]                                               
+  33	 	013.57500	-28.43938	0.44741	 	19.21	 134223	  80	11.4	1	K,H,G,H{beta}                                                               
+  34	 	013.57391	-28.44285	0.63013	 	20.63	 189039	  87	 7.8	1	K,H,H{delta},G                                                              
+  35	 	013.57178	-28.43542	0.44862	 	20.26	 134586	  73	 9.8	1	H9,K,H,G,H{beta}                                                            
+  36	 	013.56870	-28.43129	0.82266	 	19.96	 246798	  80	13.0	1	[OII],H9,H8,K,H{beta},[OIII]                                                
+  37	 	013.56332	-28.39934	0.68905	 	21.33	 206714	  71	11.1	2	[OII],H10,H9,K,H                                                            
+  39	 	013.55452	-28.38347	2.32425	 	23.55	 697272	 669	 6.0	1	broad,CIV,CIII,(QSO)                                                        
+  40	 	013.55540	-28.42658	0.64493	 	22.18	 193477	  28	12.9	2	[OII],H10,H9,H8,K,H,H{delta}                                                
+  41	 	013.54778	-28.40539	0.44664	 	22.70	 133992	  72	 7.4	1	[OII],H9,H8,H,H{delta}                                                      
+  42	 	013.54762	-28.41778	0.63147	 	22.49	 189441	  65	 8.2	1	[OII],H10,H9,H8,H,H{delta}                                                  
+  43	 	013.54239	-28.39941	0.11711	 	22.16	  35132	  19	17.7	1	H{beta},[OIII],H{alpha}                                                     
+  44	 	013.53645	-28.38009	0.82622	 	22.40	 247864	 145	 2.7	2	[OII],H10,H9,H8,K,H                                                         
+  45	 	013.54055	-28.44539	1.10116	 	22.11	 330347	  51	11.1	3	[OII],H9,K,H,H{delta}                                                       
+  46	 	013.53318	-28.38879	0.29293	 	20.25	  87879	   9	21.2	2	[OII],K,H,H{beta},H{alpha}                                                  
+  47	 	013.52895	-28.41771	0.29369	 	     	  88107	  66	 5.9	1	K,H                                                                         
+  48	 	013.52919	-28.43960	0.62038	 	21.60	 186114	   8	31.3	4	[OII],H9,H,H{beta},[OIII]                                                   
+  49	 	013.52328	-28.40698	0.68613	 	21.87	 205838	 257	 3.4	2	[OII],H                                                                     
+  50	 	013.50311	-28.40466	0.28861	 	22.15	  86582	  57	 8.6	3	K,H,G,H{beta}                                                               
+  51	 	013.49064	-28.41398	0.62989	 	21.28	 188967	  73	 5.8	1	[OII],H{beta},[OIII]                                                        
+  55	 	013.58050	-28.43802	0.44889	 	20.55	 134667	 124	 6.2	1	K,H,H{delta},G                                                              
+  57	 	013.57522	-28.43688	0.21729	 	20.89	  65187	  76	 9.5	1	K,H,G,Mgb                                                                   
+  58	 	013.56730	-28.38054	0.63131	 	21.40	 189393	  75	 6.8	1	K,H,H{beta}                                                                 
+  59	 	013.56647	-28.39309	0.89000	:	22.16	       	    	    	1	[OII],H{delta}                                                              
+  61	 	013.56739	-28.43768	0.48582	 	21.52	 145746	  36	11.4	1	[OII],H10,H9,H8,K,H,H{beta}                                                 
+  62	 	013.52963	-28.35402	0.32338	 	     	  97014	  69	11.4	1	H8,K,H,H{delta},G,H{beta}                                                   
+  63	 	013.55879	-28.38887	0.89175	 	21.51	 267525	 365	 1.5	1	[OII],H10,H9,H8,K,H,H{delta}                                                
+  64	 	013.55550	-28.38102	0.44581	 	22.19	 133743	 166	 6.3	1	H,G,Mgb                                                                     
+  65	 	013.55375	-28.44517	0.76339	 	22.37	 229014	  38	11.2	4	[OII],H10,H9,K,H,[OIII]                                                     
+  66	 	013.54741	-28.40509	0.44613	 	24.63	 133839	  34	13.3	1	[OII],K,H,[OIII]                                                            
+  67	 	013.54758	-28.42003	0.52542	 	22.36	 157626	  11	46.0	1	[OII],H10,H9,H8,K,H,H{delta}                                                
+  68	 	013.54207	-28.39949	0.11682	 	     	  35044	   8	37.1	1	[OIII],H{beta},H{alpha}                                                     
+  69	 	013.54207	-28.39949	0.82624	 	     	 247872	 170	 8.2	1	[OII],K,H                                                                   
+  70	 	013.52947	-28.37514	0.98172	 	22.58	 294516	 164	 4.0	1	[OII],H10,K,H                                                               
+  71	 	013.53075	-28.41769	0.29381	 	22.16	  88143	  55	11.1	2	K,H,H{beta}                                                                 
+  72	 	013.52818	-28.41987	1.00034	 	23.71	 300100	  46	11.1	2	MgII,[OII],H10,H8,K,H,H{delta}                                              
+  72	b	013.52818	-28.41987	1.00000	:	23.71	       	    	    	2	[OII]                                                                       
+  73	 	013.52497	-28.40487	0.63179	 	22.46	 189537	  74	 5.8	1	[OII],H{beta},[OIII]                                                        
+  74	 	013.52287	-28.40823	0.68836	 	22.59	 206508	 118	10.1	1	H8,K,H,4000{AA}-break                                                       
+  77	 	013.50562	-28.43248	0.96342	 	23.24	 289026	  70	11.2	1	[OII],H9,K,H,H{gamma}                                                       
+  79	 	013.48659	-28.38827	0.29317	 	24.79	  87951	  63	 7.0	1	[OII],H10,H9,H8,H,H{delta}                                                  
+  80	 	013.49205	-28.40422	0.62787	 	21.95	 188361	  21	21.8	1	[OII],H,H{gamma},H{beta},[OIII]                                             
+  81	 	013.56236	-28.41774	0.46800	:	23.04	       	    	    	1	[OII],K, H,H{beta}                                                          
+  83	 	013.54474	-28.37028	0.62800	:	23.13	       	    	    	1	[OII]                                                                       
+  84	 	013.54516	-28.39761	1.04600	:	23.32	       	    	    	1	MgII,[OII],K                                                                
+  85	 	013.53755	-28.38375	0.97900	:	23.21	       	    	    	1	MgII,[OII],H                                                                
+  86	 	013.53298	-28.36650	0.12650	:	23.75	       	    	    	1	[OIII],H{beta},H{alpha}                                                     
+  87	 	013.52876	-28.37394	1.10200	:	23.12	       	    	    	1	MgII,[OII],H10                                                              
+  89	 	013.52628	-28.40238	0.68790	:	22.79	       	    	    	1	[OII],H8,K,H,H{beta},[OIII]                                                 
+  91	 	013.50394	-28.36725	0.68800	:	23.17	       	    	    	1	[OII],K,H                                                                   
+  93	 	013.50662	-28.43862	0.28850	:	23.46	       	    	    	1	[OII],H{beta},[OIII],H{alpha}                                               
+  95	 	013.49350	-28.38593	0.62817	 	22.71	 188451	  17	33.3	1	[OII],H9,K,H                                                                
+  96	 	013.48804	-28.40045	0.77410	:	23.27	       	    	    	1	[OII],H8,K,H,[OIII]                                                         
+  97	 	013.48590	-28.42946	0.43600	:	23.97	       	    	    	1	[OII]                                                                       
+  99	 	013.48159	-28.44767	0.63924	 	22.78	 191772	  20	19.4	1	[OII],H{beta},[OIII]                                                        
+ 100	 	013.47770	-28.43280	0.50281	 	23.18	 150843	  20	19.0	1	[OII],H10,H9,H8,H,H{beta},[OIII]                                            
+ 101	 	013.47317	-28.40324	0.53522	 	23.27	 160566	 151	 4.4	1	K,H,4000{AA}-break,H{beta}                                                  
+ 102	 	013.46641	-28.36623	0.51330	:	23.61	       	    	    	1	[OII],H{epsilon},H{delta},H{gamma},H{beta},[OIII]                           
+ 103	 	013.47122	-28.44641	0.90949	 	22.83	 272847	 183	 5.7	1	MgII,[OII],H10,H9,H8,H                                                      
+ 104	 	013.47061	-28.44609	0.91001	 	25.65	 273003	  94	 9.8	1	MgII,[OII],H8                                                               
+ 105	 	013.46614	-28.41729	1.16878	 	23.41	 350634	  56	13.0	1	MgII,[OII],H8,H                                                             
+ 106	 	013.46003	-28.39164	0.64360	:	22.89	       	    	    	1	[OII],H9,H{beta}                                                            
+ 107	 	013.46054	-28.42475	1.02200	:	23.33	       	    	    	1	[OII],H9                                                                    
+ 108	 	013.45801	-28.41621	0.83132	 	22.37	 249396	 192	 8.3	1	MgII,[OII],H10,H9,H8,K,H                                                    
+ 109	 	013.45555	-28.41175	0.82660	:	     	       	    	    	1	[OII],H9,K,H{beta},[OIII]                                                   
+ 110	 	013.45114	-28.39200	0.79700	 	23.10	 239100	    	    	1	[OII],H10,K                                                                 
+ 111	 	013.45428	-28.44966	0.60960	:	22.75	       	    	    	1	[OII]                                                                       
+ 112	 	013.45490	-28.44951	0.83660	:	22.51	       	    	    	1	[OII],H{beta},[OIII]                                                        
+ 113	 	013.45126	-28.43824	1.30100	:	22.98	       	    	    	1	MgII,[OII]                                                                  
+ 114	 	013.45027	-28.44664	1.21400	:	23.24	       	    	    	1	MgII,[OII]                                                                  
+ 115	 	013.44752	-28.43847	0.68860	:	21.17	       	    	    	1	MgII,H10,H9,H8,K,H,H{delta}                                                 
+ 116	 	013.44056	-28.39758	0.68592	 	22.13	 205776	  99	 7.4	2	[OII],H9,H8,K,H,H{delta},H{beta}                                            
+ 117	 	013.43760	-28.38722	0.44790	:	21.79	       	    	    	1	[OII],H9,H8,K,H                                                             
+ 118	 	013.43429	-28.37071	0.68800	:	21.99	       	    	    	1	H9,K,H,G                                                                    
+ 120	 	013.43749	-28.45215	0.55850	:	21.71	       	    	    	1	[OII],H9,H{beta},[OIII]                                                     
+ 121	 	013.43548	-28.45206	0.88230	:	23.42	       	    	    	1	MgII,[OII],H9,H                                                             
+ 122	 	013.47934	-28.38069	0.64065	 	22.24	 192194	  10	34.7	2	[OII],H10,H9,H8,K,H                                                         
+ 123	 	013.47871	-28.38610	0.64035	 	22.07	 192105	  19	22.9	1	[OII],H10,H9,H8,H,H{delta},H{beta},[OIII]                                   
+ 124	 	013.46730	-28.37173	0.58543	 	23.53	 175628	  86	 6.1	2	[OII],H                                                                     
+ 127	 	013.46400	-28.44285	0.55830	 	22.65	 167490	  27	15.1	1	[OII],H,H{delta},H{beta},[OIII]                                             
+ 128	 	013.45822	-28.39604	0.18642	 	     	  55925	  23	13.0	1	H{beta},[OIII],H{alpha}                                                     
+ 129	 	013.45506	-28.40463	0.72139	 	22.84	 216415	  85	 8.0	2	[OII],H10,H9,H,H{beta}                                                      
+ 130	 	013.45288	-28.39614	0.98046	 	22.04	 294138	 118	11.0	1	K,H                                                                         
+ 131	 	013.44715	-28.37697	0.95800	 	21.90	 287400	    	    	1	MgII,[OII],K                                                                
+ 132	 	013.44430	-28.37561	0.29340	 	20.17	  88020	  51	16.2	1	K,H,H{delta},Fe43,H{beta}                                                   
+ 133	 	013.44557	-28.41497	0.65576	 	21.51	 196726	  11	20.5	4	MgII,[OII],H9,K,H                                                           
+ 134	 	013.44588	-28.42924	0.41910	 	20.90	 125729	  41	10.2	2	[OII],H,[OIII]                                                              
+ 135	 	013.43624	-28.38396	0.69039	 	     	 207117	  57	14.0	1	[OII],H10,H9,H8,K,H                                                         
+ 136	 	013.43773	-28.41137	0.68655	 	22.28	 205963	  68	14.3	3	H9,K,H,4000{AA}-break,H{delta},G,H{beta}                                    
+ 137	 	013.43321	-28.38882	0.29502	 	     	  88506	  53	15.5	1	K,H,Mgb                                                                     
+ 138	 	013.43693	-28.44907	0.55962	 	21.53	 167886	  46	10.9	1	[OII],H9,H8,K,H,H{delta},H{beta}                                            
+ 139	 	013.49732	-28.38908	0.29237	 	20.53	  87710	  44	12.8	2	K,H,G,Mgb                                                                   
+ 140	 	013.51929	-28.40017	0.28781	 	21.96	  86341	  12	21.2	2	[OII],H9,H8,K,H,H{beta},H{alpha}                                            
+ 141	 	013.50833	-28.38424	0.29477	 	21.00	  88431	  47	11.2	1	K,H                                                                         
+ 142	 	013.50317	-28.37050	0.29481	 	     	  88442	  30	22.4	2	K,H,H{beta}                                                                 
+ 143	 	013.51644	-28.38247	0.63094	 	21.40	 189282	  60	 8.1	2	[OII],K,H                                                                   
+ 144	 	013.55074	-28.42367	0.44764	 	21.29	 134292	  22	27.5	1	[OII],H9,H8,K,H,H{beta}                                                     
+ 146	 	013.52276	-28.38141	0.43630	 	20.98	 141063	  37	12.5	2	[OII],H8,K,H,H                                                              
+ 147	 	013.56063	-28.41641	0.29223	 	18.56	  87669	  46	17.2	1	H9,K,H,H{delta},G,H{beta},Mgb                                               
+ 148	 	013.54145	-28.39008	0.45375	 	21.94	 136123	  24	12.6	3	[OII],K,H,H{beta},[OIII]                                                    
+ 149	 	013.55563	-28.40617	0.43607	 	20.49	 130821	  55	 8.7	2	K,H,G,H{delta},H{beta}                                                      
+ 150	 	013.54429	-28.38831	0.95100	 	22.09	 285300	    	    	1	[OII],H{epsilon},H{delta},H{gamma}                                          
+ 151	 	013.54459	-28.38795	0.49762	 	22.23	 149286	  33	11.1	1	[OII],K,H,H{beta}                                                           
+ 152	 	013.55109	-28.39275	0.13040	 	22.43	  39120	  28	12.3	1	[OIII],H{alpha}                                                             
+ 153	 	013.53984	-28.37560	0.29455	 	23.09	  88365	  56	 5.7	1	[OII],H8,H,K,H{alpha}                                                       
+ 154	 	013.54780	-28.38330	0.98171	 	22.68	 294513	 223	 1.5	2	FeII24,FeII26,MgII,[OII],K,H,H{gamma}                                       
+ 155	 	013.55547	-28.38976	0.20633	 	22.20	  61899	  21	15.3	1	H{beta},[OIII],H{alpha}                                                     
+ 156	 	013.54798	-28.37027	0.18348	 	21.73	  55043	  38	11.7	1	H{beta},[OIII]                                                              
+ 157	 	013.56129	-28.37628	0.41519	 	22.13	 124556	  49	 5.6	3	[OII],H9,H8,K,H,G,[OIII]                                                    
+ 158	 	013.55211	-28.36059	0.40767	 	20.86	 122301	  64	 9.6	2	H9,K,H,H{delta},G,Fe43                                                      
+ 159	 	013.49692	-28.40497	0.64511	 	20.63	 193531	  49	12.8	2	[OII],H9,H8,K,H,H{delta}                                                    
+ 160	 	013.47803	-28.38478	0.20323	 	22.81	  60967	  50	 6.2	3	H9,K,H,H{delta},[OIII],H{alpha}                                             
+ 161	 	013.48144	-28.39336	0.44612	 	21.92	 133836	  25	19.0	2	[OII],H9,H8,K,H,H{beta},[OIII]                                              
+ 162	 	013.49874	-28.41786	0.60973	 	21.37	 182919	  25	18.2	1	[OII],H9,H,H{delta},H{beta}                                                 
+ 163	 	013.48322	-28.40230	0.82564	 	22.76	 247691	 196	 6.9	2	MgII,[OII],H9,H8,H                                                          
+ 164	 	013.48628	-28.41120	0.43690	 	21.83	 131070	  39	 8.4	1	[OII],H{gamma},H{beta},[OIII]                                               
+ 165	 	013.47289	-28.39852	0.68821	 	21.62	 206463	  90	11.3	3	[OII],H9,H8,K,H,H{delta},H{beta}                                            
+ 166	 	013.48609	-28.41850	0.62818	 	22.55	 188454	  28	16.2	2	[OII],H9,H8,H,H{delta}                                                      
+ 167	 	013.49829	-28.43797	1.54212	 	22.78	 462634	 295	 2.2	2	FeII24,FeII26,MgII                                                          
+ 168	 	013.47144	-28.40910	0.40711	 	21.35	 122133	  37	11.1	1	[OII],H9,H8,K,H,H{delta},H{beta}                                            
+ 169	 	013.47735	-28.42407	0.63370	 	21.86	 190110	  42	15.2	1	[OII],H10,H9,H8,K,H,H{delta},H{beta}                                        
+ 170	 	013.47296	-28.42265	0.28994	 	22.76	  86982	  34	21.8	1	K,H,G,H{beta}                                                               
+ 171	 	013.45904	-28.41023	0.53328	 	20.90	 159984	  71	12.1	1	K,H,H{delta},G                                                              
+ 173	 	013.49068	-28.43645	-0.0002	 	21.61	    -60	 149	 1.9	1	                                                                            
+ 174	 	013.45220	-28.41473	0.82813	 	22.40	 248439	 975	 1.5	1	[OII],H9,H8,K,H                                                             
+ 175	 	013.48125	-28.45457	0.22844	 	21.73	  68530	  11	15.7	5	[OII],H{beta},[OIII]                                                        
+ 176	 	013.44186	-28.41425	0.68662	 	22.39	 205986	 111	10.7	1	[OII],H9,H8,K,H,H{delta}                                                    
+ 177	 	013.51387	-28.39157	0.28884	 	20.94	  86652	  42	14.4	2	K,H,G,H{beta}                                                               
+ 178	 	013.53943	-28.41253	0.44596	 	19.41	 133788	  95	14.4	1	[OII],K,H,H{beta}                                                           
+ 179	 	013.55183	-28.42207	0.46721	 	22.07	 140163	 114	 7.7	1	K,H,G,H{beta}                                                               
+ 180	 	013.51196	-28.36957	0.28866	 	21.90	  86597	  49	 9.8	4	H9,H8,K,H,H{delta},G                                                        
+ 181	 	013.52415	-28.36660	0.29389	 	20.62	  88167	  39	20.2	1	[OII],K,H,H{delta},Mgb                                                      
+ 182	 	013.55471	-28.39884	0.44675	 	20.21	 134025	  57	12.5	1	[OII],K,H                                                                   
+ 183	 	013.56937	-28.41292	0.43523	 	22.37	 130569	  49	 8.7	1	[OII]                                                                       
+ 184	 	013.56618	-28.39295	0.07428	 	     	  22282	  35	10.7	1	                                                                            
+ 185	 	013.54026	-28.35512	0.20313	 	20.80	  60939	  29	15.1	1	K,H,H{delta},H{beta},[OIII]                                                 
+ 186	 	013.57899	-28.39945	0.60118	 	20.89	 180354	 105	 6.9	1	H9,K,H,G,H{beta},Mgb                                                        
+ 187	 	013.56912	-28.37923	0.51405	 	22.24	 154215	  24	17.4	1	[OII],H{beta},[OIII]                                                        
+ 188	 	013.49494	-28.41673	0.36317	 	21.11	 108951	  42	18.2	1	H9,K,H,G                                                                    
+ 189	 	013.47585	-28.39828	0.29694	 	20.78	  89082	  59	13.3	1	K,H,G,H{beta},Mgb                                                           
+ 190	 	013.48635	-28.41884	0.60999	 	21.98	 182995	  22	14.6	2	[OII],H9,K,H,H{beta}                                                        
+ 191	 	013.48065	-28.41647	0.63716	 	21.62	 191148	  17	26.4	1	[OII],H9,H8,H,H{delta},H{beta},[OIII]                                       
+ 192	 	013.47015	-28.41090	0.40750	:	20.50	       	    	    	1	[OII],H9,K,H,H{delta}                                                       
+ 193	 	013.46413	-28.41636	0.29410	:	21.25	       	    	    	1	K,H,H{delta},G,H{beta}                                                      
+ 194	 	013.45989	-28.42263	0.53200	:	23.21	       	    	    	1	[OIII]                                                                      
+ 196	 	013.45574	-28.42670	0.64820	:	23.17	       	    	    	1	[OII],H8,H,H{delta},H{beta},[OIII]                                          
+ 197	 	013.48752	-28.36655	0.46922	 	21.84	 140764	  15	22.7	2	[OII],H9,K,H,H{beta},[OIII]                                                 
+ 198	 	013.51450	-28.36144	0.44658	 	21.55	 133972	  41	 8.3	3	K,H,H{delta},H{beta}                                                        
+ 199	 	013.50851	-28.36485	0.84628	 	22.66	 253883	  37	11.2	4	[OII],H9,H8,H                                                               
+ 200	 	013.48420	-28.37349	0.29313	 	21.52	  87937	  19	21.9	2	[OII],H,H{alpha}                                                            
+ 201	 	013.49121	-28.37347	0.29124	 	20.85	  87372	  46	11.1	3	K,H,H{delta},H{beta},Mgb                                                    
+ 202	 	013.49495	-28.37615	0.41505	 	22.38	 124515	  18	17.7	2	[OII],H{beta},[OIII]                                                        
+ 203	 	013.52593	-28.36980	0.68816	 	22.10	 206447	  28	14.4	3	[OII],H9,K,H                                                                
+ 204	 	013.46638	-28.38775	0.44855	 	21.26	 134565	  59	 9.4	1	[OII],H8,H,H{delta}                                                         
+ 205	 	013.46900	-28.39166	0.68833	 	21.86	 206499	  77	12.9	1	[OII],H9,H                                                                  
+ 206	 	013.50050	-28.38546	0.50354	 	21.01	 151060	  49	10.0	3	H9,K,H,H{delta},G,H{gamma},H{beta}                                          
+ 207	 	013.49275	-28.39379	0.62839	 	21.55	 188515	  59	 8.5	2	K,H,H{delta},G                                                              
+ 208	 	013.50615	-28.39246	1.71476	 	21.40	 514426	 161	 2.9	2	AlIII,FeII24,FeII26,MgII                                                    
+ 209	 	013.50919	-28.39595	0.28559	 	22.33	  85677	  12	17.2	2	[OII],H{beta},[OIII],H{alpha}                                               
+ 210	 	013.51326	-28.40020	0.29316	 	19.30	  87949	  53	14.8	3	K,H,G,Fe43,Ca44,Fe45,H{beta},Mgb                                            
+ 211	 	013.51287	-28.40442	0.28644	 	20.34	  85932	  69	12.1	1	K,H,H{delta},Ca44,Mgb                                                       
+ 212	 	013.52030	-28.41504	0.29413	 	21.44	  88237	  27	18.4	2	K,H,H{delta},H{gamma},Ca44,H{beta}                                          
+ 213	 	013.51922	-28.42001	0.29259	 	21.98	  87776	  66	 9.5	3	K,H,H{delta},G                                                              
+ 214	 	013.54850	-28.42296	0.29266	 	19.80	  87798	  23	16.1	1	[OII],H10,H9,H8,K,H,H{beta},[OIII]                                          
+ 216	 	013.50624	-28.43856	0.28859	 	     	  86576	  17	15.0	2	[OII],H{beta},[OIII],H{alpha}                                               
+ 217	 	013.56080	-28.42700	0.35325	 	20.90	 105973	  34	11.6	2	[OII],H9,K,H                                                                
+ 218	 	013.54348	-28.43490	0.43800	 	21.27	 131400	    	    	1	[OII]                                                                       
+ 219	 	013.52968	-28.44754	0.34516	 	     	 103546	  43	11.5	2	H9,K,H,H{alpha}                                                             
+ 220	 	013.49553	-28.45857	0.29619	 	22.35	  88856	  47	10.7	2	                                                                            
+ 221	 	013.49794	-28.46295	0.50376	 	21.71	 151128	  45	16.9	1	[OII],H9,H8,K,H                                                             
+ 222	 	013.48176	-28.46846	0.29452	 	19.36	  88356	  71	10.3	1	K,H,H{beta}                                                                 
+ 223	 	013.51633	-28.46253	0.56082	 	20.50	 168245	  37	15.3	2	[OII],H9,H,H{delta}                                                         
+ 224	 	013.55979	-28.45199	0.29004	 	22.05	  87012	  22	13.2	2	[OII],H,H{beta},[OIII]                                                      
+ 225	 	013.52810	-28.46308	0.49178	 	21.83	 147533	  22	15.2	2	[OII],H,H{beta},[OIII]                                                      
+ 226	 	013.53210	-28.46517	1.00453	 	22.40	 301359	  88	 8.8	1	MgII,[OII],H                                                                
+ 227	 	013.53192	-28.46594	1.00404	 	22.47	 301212	  65	10.9	1	[OII],H                                                                     
+ 228	 	013.55390	-28.46282	0.68163	 	21.03	 204489	  49	13.1	2	[OII],H8,H,H{beta},[OIII]                                                   
+ 229	 	013.54179	-28.46849	0.30433	 	22.38	  91298	  16	20.8	3	[OII],H{beta},[OIII],H{alpha}                                               
+ 230	 	013.51455	-28.47784	0.29182	 	21.76	  87545	  63	11.7	2	K,H                                                                         
+ 231	 	013.50930	-28.37683	0.29279	 	19.65	  87835	  75	 8.3	2	K,H,H{delta},G,H{gamma},Fe43,H{beta},Mgb                                    
+ 232	 	013.54296	-28.37214	0.40669	 	20.10	 122006	  36	 8.7	3	[OII],H9,H8,K,H,H{delta},H{beta},H{alpha}                                   
+ 233	 	013.50526	-28.39335	0.63909	 	20.91	 191727	  37	17.5	1	[OII],H9,K,H                                                                
+ 234	 	013.55956	-28.41889	0.46605	 	19.51	 139815	 100	 9.2	1	[OII],K,H,G                                                                 
+ 235	 	013.49913	-28.43670	0.29384	 	21.00	  88152	  69	11.1	1	K,H,G,Fe43,H{beta},Mgb,E                                                    
+ 236	 	013.56045	-28.42594	0.32076	 	21.68	  96228	  66	 7.1	1	[OII],H,H{beta},H{alpha}                                                    
+ 237	 	013.56496	-28.42859	0.43640	 	21.54	 130920	  77	 9.0	1	[OII],K,H                                                                   
+ 238	 	013.50912	-28.44559	0.29179	 	21.65	  87537	  90	 6.5	1	K,H,H{delta},H{beta}                                                        
+ 239	 	013.53652	-28.44524	0.20468	 	21.79	  61403	  24	12.6	2	H{beta},[OIII],H{alpha}                                                     
+ 240	 	013.55788	-28.44131	0.39638	 	21.96	 118914	  31	11.8	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 241	 	013.55087	-28.44730	0.44880	 	22.54	 134640	  54	 8.3	2	[OII],K,H                                                                   
+ 242	 	013.53138	-28.45612	0.07474	 	18.83	  22421	  62	 6.9	1	[OIII],H{alpha}                                                             
+ 243	 	013.55690	-28.45160	0.60239	 	21.71	 180717	  21	24.6	1	[OII],H9,H8,H,H{beta}                                                       
+ 244	 	013.49750	-28.36183	0.44853	 	23.07	 134559	 150	 5.2	1	4000{AA}-break,G,H{beta}                                                    
+ 245	 	013.46711	-28.37125	0.58548	 	23.37	 175644	  61	 6.9	1	[OII],H8,H                                                                  
+ 246	 	013.50533	-28.36714	0.68943	 	21.94	 206829	  52	17.9	1	[OII],H10,H9,H                                                              
+ 248	 	013.51192	-28.36850	0.95751	 	22.15	 287253	  81	 7.6	1	MgII,[OII],H9,H                                                             
+ 249	 	013.50411	-28.37266	0.07588	 	23.22	  22763	  17	18.8	1	H{beta},[OIII],H{alpha}                                                     
+ 250	 	013.51829	-28.38180	0.63175	 	22.77	 189525	  13	33.6	1	[OII],H10,H9,K,H,[OIII]                                                     
+ 252	 	013.50599	-28.39657	0.29656	 	21.81	  88968	  76	 8.9	1	K,H,4000{AA}-break,H{delta}                                                 
+ 253	 	013.51902	-28.41399	0.72090	 	23.29	 216270	  85	 8.4	1	[OII],H{beta},[OIII]                                                        
+ 255	 	013.49541	-28.43757	0.46643	 	23.03	 139929	  33	 9.9	2	[OII],H{beta},[OIII]                                                        
+ 257	 	013.50859	-28.43865	0.68918	 	22.54	 206753	  45	11.4	3	[OII],H9,K,H,H{beta},[OIII]                                                 
+ 258	 	013.51469	-28.43876	0.62766	 	22.68	 188298	  44	10.7	1	[OII],K,H                                                                   
+ 259	 	013.51884	-28.43975	0.46659	 	22.15	 139977	  55	10.8	1	[OII],H9,H,[OIII]                                                           
+ 260	 	013.51171	-28.44719	0.83528	 	22.90	 250584	  65	13.8	1	[OII],H9,H8,H                                                               
+ 261	 	013.51555	-28.44869	0.62748	 	22.81	 188244	  41	14.3	1	[OII],K,H                                                                   
+ 262	 	013.48586	-28.46612	0.50304	 	22.87	 150912	 100	 7.8	1	[OII],H10,K,H                                                               
+ 264	 	013.53387	-28.45892	0.43551	 	22.88	 130653	  23	18.4	1	[OII],H{beta},[OIII]                                                        
+ 265	 	013.51118	-28.46608	1.30353	 	22.82	 391059	 255	 1.8	1	FeII24,FeII26,MgII                                                          
+ 266	 	013.55328	-28.45736	0.68301	 	22.94	 204903	  65	13.2	1	[OII],H9,H8,H,[OIII]                                                        
+ 267	 	013.53093	-28.46591	0.96102	 	22.67	 288306	 103	 4.7	1	FeII26,MgII,[OII]                                                           
+ 268	 	013.52309	-28.46982	1.02295	 	22.43	 306885	  50	16.3	1	MgII,[OII]                                                                  
+ 269	 	013.52841	-28.46907	0.96314	 	23.14	 288941	  41	12.4	2	MgII,[OII]                                                                  
+ 271	 	013.56425	-28.46469	0.82010	 	22.36	 246030	 119	10.2	1	K,H,4000{AA}-break                                                          
+ 272	 	013.56420	-28.38149	0.62725	 	22.91	 188174	  27	17.5	2	[OII],H9,K,H                                                                
+ 273	 	013.54852	-28.36609	0.41509	 	23.26	 124525	  37	 5.9	2	[OII],H9,H,H{beta},[OIII]                                                   
+ 274	 	013.54779	-28.37007	0.18345	 	     	  55033	  11	20.1	2	H{beta},[OIII],H{alpha}                                                     
+ 275	 	013.55553	-28.38480	0.98627	 	22.62	 295881	 355	 6.1	1	[OII]                                                                       
+ 276	 	013.55045	-28.38330	0.82840	 	23.25	 248520	    	    	1	[OII]                                                                       
+ 277	 	013.56435	-28.40551	0.82612	 	     	 247836	  82	10.5	1	K,H                                                                         
+ 278	 	013.56471	-28.40548	0.82480	:	21.88	       	    	    	1	[OII],H                                                                     
+ 279	 	013.55561	-28.39893	0.71882	 	22.02	 215646	 207	 3.6	1	[OII]                                                                       
+ 280	 	013.55951	-28.40734	0.49138	 	22.76	 147414	  14	16.9	1	[OIII]                                                                      
+ 281	 	013.54861	-28.40080	0.28908	 	22.93	  86724	  37	 6.2	1	H{beta},[OIII]                                                              
+ 282	 	013.55068	-28.40457	1.09970	 	22.81	 329910	    	    	1	weak,[OII],H8,K,H,4000{AA}-break                                            
+ 283	 	013.53389	-28.39621	0.63182	 	22.31	 189546	 161	 5.9	1	[OII],[OIII]                                                                
+ 287	 	013.52054	-28.40257	0.98032	 	23.91	 294096	 126	10.1	1	[OII],K,H,4000{AA}-break                                                    
+ 288	 	013.51920	-28.40365	0.68969	 	     	 206907	 112	10.9	1	K,H,4000{AA}-break                                                          
+ 290	 	013.50967	-28.41960	1.72040	 	23.40	 515154	 260	 4.6	1	FeII24,FeII26,MgII                                                          
+ 291	 	013.51606	-28.43211	1.00245	 	23.47	 300735	 140	 7.6	1	[OII],H9,H8,K,H,4000{AA}-break,H{delta}                                     
+ 292	 	013.50005	-28.41411	0.99989	 	23.42	 299967	 191	 3.2	1	[OII],H10,H9,K,H,4000{AA}-break,H{delta}                                    
+ 293	 	013.49817	-28.41612	0.92200	 	22.70	 277098	 226	 1.5	1	MgII,[OII],H10,H9,K,H                                                       
+ 294	 	013.46225	-28.38460	0.43689	 	22.74	 131067	  72	 4.0	1	H{beta},[OIII]                                                              
+ 295	 	013.47064	-28.40457	0.76363	 	22.34	 229089	  86	14.3	1	H9,H8,K,H,4000{AA}-break,H{delta}                                           
+ 296	 	013.48109	-28.41952	0.82181	 	22.46	 246543	 241	 5.1	1	K,H,4000{AA}-break,H{delta},G                                               
+ 297	 	013.46064	-28.39810	0.82223	 	22.87	 246669	 244	 1.2	1	[OII],H9,K,H                                                                
+ 298	 	013.45826	-28.39708	0.64548	 	22.85	 193644	 220	 4.4	1	[OII],H9,H8,H,H{delta}                                                      
+ 300	 	013.47124	-28.42133	0.82500	 	22.65	 271616	 178	 7.1	2	FeII26,MgII,[OII],H9,H8,K,H                                                 
+ 301	 	013.46842	-28.42165	0.82204	 	23.21	 246612	  18	10.0	1	K,H,4000{AA}-break,G                                                        
+ 302	 	013.47483	-28.43514	0.96868	 	23.32	 290604	 373	 1.4	1	MgII,[OII],H9,K,H                                                           
+ 303	 	013.47605	-28.44647	0.69370	 	23.57	 208110	 188	 5.2	1	H8,K,H,G                                                                    
+ 304	 	013.54897	-28.42511	-0.0002	 	     	    -60	 225	 0.3	1	                                                                            
+ 305	 	013.49828	-28.44296	0.42898	 	22.78	 128694	  73	 7.4	1	[OII],[OIII]                                                                
+ 306	 	013.49233	-28.44914	0.84358	 	21.67	 253074	 158	 2.9	1	MgII,[OII],H10,H9,K                                                         
+ 307	 	013.54239	-28.43648	0.29220	 	22.34	  87660	  40	10.4	1	[OII],H{alpha}                                                              
+ 308	 	013.54824	-28.43737	0.77452	 	22.23	 232356	 173	 4.8	1	[OII]                                                                       
+ 309	 	013.51210	-28.45078	0.63843	 	22.40	 191529	  18	25.2	1	[OII]                                                                       
+ 310	 	013.50615	-28.45951	0.68890	 	21.78	 206670	    	    	1	[OII]                                                                       
+ 313	 	013.51541	-28.46216	0.55905	 	22.43	 167715	  15	33.3	1	[OII],[OIII]                                                                
+ 315	 	013.49381	-28.47166	0.43526	 	21.52	 130578	  22	25.0	1	[OII],H{beta}                                                               
+ 317	 	013.54850	-28.46065	0.82372	 	22.52	 247116	  60	13.4	1	[OII],H9,K                                                                  
+ 318	 	013.55532	-28.46298	0.68151	 	22.49	 204453	 163	10.4	1	H9,K,H,4000{AA}-break                                                       
+ 319	 	013.52622	-28.47446	0.43446	 	22.78	 130338	  24	22.6	1	[OII]                                                                       
+ 320	 	013.48746	-28.36498	0.46893	 	21.25	 140679	  18	24.4	1	H{beta},[OIII]                                                              
+ 321	 	013.47218	-28.38214	0.29288	 	22.34	  87864	  56	13.9	1	K,H                                                                         
+ 322	 	013.49444	-28.38793	0.29350	 	22.73	  88050	  34	16.3	1	K,H,H{delta}                                                                
+ 323	 	013.67210	-28.35075	0.47625	 	22.51	 142875	  62	 6.5	1	[OII]                                                                       
+ 324	 	013.70106	-28.35907	0.67462	 	21.73	 202386	 234	 3.3	1	K,H,H{delta}                                                                
+ 325	 	013.68849	-28.36070	0.27305	 	20.04	  81915	  14	25.5	1	[OII],H10,H9,H8,H,H{delta},H{beta},[OIII],H{alpha}                          
+ 326	 	013.65925	-28.36345	0.23782	 	21.58	  71346	  38	10.7	1	[OII],H9,K,H,[OIII],H{alpha}                                                
+ 327	 	013.68553	-28.36552	0.72289	 	22.19	 216867	 245	 1.8	1	[OII]                                                                       
+ 328	 	013.63425	-28.36858	0.28970	 	21.99	  86910	  44	 5.9	1	[OII],[OIII]                                                                
+ 329	 	013.62035	-28.37125	0.43000	:	23.01	       	    	    	1	[OII],?                                                                     
+ 331	 	013.65331	-28.38267	0.40777	 	21.27	 122331	  48	 8.4	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 332	 	013.61999	-28.38764	0.56238	 	20.83	 168714	  75	 8.5	1	[OII],K,H                                                                   
+ 333	 	013.62463	-28.39138	0.27287	 	21.16	  81861	  48	 9.1	1	[OII],[OIII]                                                                
+ 334	 	013.64760	-28.39347	0.51703	 	21.54	 155109	 101	 5.8	1	K,H                                                                         
+ 335	 	013.68894	-28.39788	0.58321	 	20.77	 174963	  51	 9.0	1	K,H,G                                                                       
+ 336	 	013.68966	-28.40089	0.53926	 	22.12	 161778	  56	10.2	1	[OII]                                                                       
+ 337	 	013.67589	-28.40264	0.58288	 	20.94	 174864	  30	11.3	1	[OII],H                                                                     
+ 338	 	013.69517	-28.40534	0.58162	 	21.69	 174486	 163	 6.7	1	K,H,4000{AA}-break                                                          
+ 339	 	013.67653	-28.40619	0.58367	 	21.79	 175101	  77	 7.5	1	[OII],H{beta}                                                               
+ 340	 	013.69514	-28.41351	0.36274	 	20.67	 108822	  81	 6.5	1	[OII],H                                                                     
+ 341	 	013.68472	-28.41552	0.58636	 	21.86	 175908	 140	 3.6	1	[OII]                                                                       
+ 342	 	013.69230	-28.41730	0.58000	:	22.26	       	    	    	1	4000{AA}-break                                                              
+ 343	 	013.69146	-28.41983	0.58715	 	21.69	 176145	  64	 5.4	1	H,4000{AA}-break                                                            
+ 344	 	013.65692	-28.42336	0.51819	 	22.75	 155457	  70	 4.1	1	[OII]                                                                       
+ 345	 	013.64935	-28.42739	0.56301	 	22.65	 168903	  49	 5.4	1	[OII]                                                                       
+ 346	 	013.61543	-28.42873	3.86968	 	21.44	1160900	 188	32.8	1	Ly{beta},Ly{alpha},CIV,(QSO)                                                
+ 348	 	013.62145	-28.43262	0.79000	 	22.36	 237000	    	    	1	[OII],?                                                                     
+ 349	 	013.61574	-28.43520	0.48309	 	20.33	 144927	 106	 7.7	1	K,H,G                                                                       
+ 350	 	013.67487	-28.43720	0.41731	 	21.21	 125193	  19	17.9	1	[OII],H{beta},[OIII]                                                        
+ 351	 	013.67146	-28.43893	0.58218	 	20.73	 174654	  85	12.0	1	K,H,G                                                                       
+ 352	 	013.63894	-28.44222	0.80840	 	21.62	 242520	 410	 2.9	1	[OII],K,H                                                                   
+ 353	 	013.63956	-28.44435	0.78863	 	21.58	 236589	 367	 1.2	1	[OII],?                                                                     
+ 354	 	013.67234	-28.44813	1.09584	 	22.76	 328752	 170	 2.7	1	[OII]                                                                       
+ 355	 	013.63982	-28.45039	0.69400	:	     	       	    	    	1	K,H,4000{AA}-break                                                          
+ 357	 	013.62898	-28.45427	0.73520	 	21.55	 220560	  94	18.7	1	H[OII],H9,H8,K,H                                                            
+ 358	 	013.64871	-28.45751	0.58469	 	21.31	 175407	 117	 6.0	1	K,H,4000{AA}-break,G                                                        
+ 359	 	013.60613	-28.45933	0.44446	 	21.13	 133338	  57	17.4	1	K,H,4000{AA}-break,G                                                        
+ 360	 	013.66829	-28.46147	0.48472	 	20.69	 145416	 119	 4.6	1	[OII],H9,H{delta}                                                           
+ 361	 	013.66825	-28.54524	0.63443	 	21.60	 190329	  53	 6.6	1	K,H,H{delta}                                                                
+ 362	 	013.65093	-28.55160	0.63359	 	21.56	 190077	  76	 7.9	2	K,H                                                                         
+ 363	 	013.64950	-28.54766	0.20285	 	20.09	  60855	  25	16.0	1	H9,H8,H,H{delta},[OIII],H{alpha}                                            
+ 364	 	013.65150	-28.54286	0.64323	 	21.62	 192969	  36	10.4	1	[OII],H8,K,H,H{delta},H{beta}                                               
+ 365	 	013.65889	-28.53384	0.29039	 	21.76	  87117	  33	10.1	1	[OII],[OIII],H{alpha}                                                       
+ 366	 	013.66835	-28.52221	0.26579	 	21.87	  79737	  35	 8.5	1	[OII],H,H{delta},[OIII],H{alpha}                                            
+ 367	 	013.66669	-28.52184	0.47194	 	21.29	 141582	  84	 6.5	1	[OII],4000{AA}-break                                                        
+ 368	 	013.63122	-28.54706	0.41896	 	20.84	 125688	  25	15.3	1	[OII],H{delta},H{beta},[OIII]                                               
+ 369	 	013.63776	-28.53873	0.65654	 	21.52	 196962	  64	 8.3	1	[OII],H9,H8,K,H                                                             
+ 370	 	013.69033	-28.48981	0.22520	 	22.09	  67560	  35	11.0	1	[OII],H,[OIII]                                                              
+ 371	 	013.65487	-28.51759	0.76382	 	21.54	 229146	 676	 1.8	1	[OII],H9,H8,K,H                                                             
+ 372	 	013.63064	-28.53653	0.52288	 	21.10	 156864	  99	10.6	1	[OII],H8,K,H                                                                
+ 373	 	013.63758	-28.52599	0.29439	 	20.50	  88317	  14	25.6	1	[OII],H9,K,H,H{beta},[OIII],H{alpha}                                        
+ 374	 	013.63275	-28.52499	0.36442	 	20.47	 109326	  38	 9.9	1	[OII],K,H,H{beta},[OIII],H{alpha}                                           
+ 375	 	013.63433	-28.51802	0.32377	 	20.07	  97131	  54	 8.0	1	[OII],H9,H8,K,H,H{alpha}                                                    
+ 376	 	013.62988	-28.51775	0.32407	 	19.40	  97221	 134	 5.9	1	H10,K,H,G                                                                   
+ 377	 	013.62739	-28.51790	0.24777	 	22.09	  74331	  33	10.2	1	[OII],[OIII],H{alpha}                                                       
+ 378	 	013.62395	-28.51627	0.32478	 	20.37	  97434	  51	19.2	1	K,H,G                                                                       
+ 379	 	013.62918	-28.51061	0.32463	 	20.42	  97389	  62	12.4	1	K,H,G                                                                       
+ 380	 	013.63134	-28.50576	0.32245	 	22.50	  96735	 158	 5.2	1	H9,H8,H                                                                     
+ 381	 	013.60605	-28.52516	0.29481	 	20.36	  88443	  69	11.8	1	K,H,H{beta},Mgb                                                             
+ 382	 	013.60220	-28.52676	0.35439	 	20.86	 106317	  52	16.2	1	K,H,G,H{beta}                                                               
+ 383	 	013.60933	-28.51596	0.48497	 	20.47	 145491	 109	 8.5	1	[OII],K,H                                                                   
+ 384	 	013.61691	-28.50320	0.16191	 	19.87	  48573	  23	12.3	1	H,H{beta},[OIII],H{alpha}                                                   
+ 385	 	013.65023	-28.46424	0.22225	 	21.47	  66675	  28	14.3	1	[OII],[OIII]                                                                
+ 386	 	013.61460	-28.49179	0.63155	 	20.83	 189465	  61	12.2	1	[OII],H,H{delta}                                                            
+ 387	 	013.64054	-28.46539	0.58446	 	20.87	 175338	  44	21.6	1	K,H,G                                                                       
+ 388	 	013.62084	-28.47944	0.41494	 	19.92	 124482	  42	12.0	1	[OII],H9,K,H                                                                
+ 389	 	013.61550	-28.47894	0.49121	 	21.48	 147363	  52	 9.1	1	[OII]                                                                       
+ 390	 	013.62847	-28.46398	0.58392	 	21.17	 175176	  47	 9.9	1	[OII],H,H{beta},[OIII]                                                      
+ 391	 	013.62677	-28.46184	0.44763	 	21.09	 134289	  45	14.8	1	K,H,G,H{beta}                                                               
+ 392	 	013.57775	-28.50175	0.29331	 	20.74	  87993	  52	14.8	1	K,H                                                                         
+ 393	 	013.62908	-28.45436	0.73527	 	     	 220581	 304	 4.0	1	[OII],H9,H8,K,H                                                             
+ 394	 	013.63910	-28.44239	0.80898	 	     	 242694	 577	 0.9	1	MgII,[OII],H8,K,H                                                           
+ 395	 	013.57914	-28.49002	0.80238	 	22.08	 240714	 307	 0.7	1	MgII,[OII],H{beta},[OIII]                                                   
+ 396	 	013.57502	-28.49118	0.80188	 	22.43	 240564	 276	 0.7	1	[OII],H{beta},[OIII]                                                        
+ 397	 	013.57247	-28.49085	0.47682	 	22.35	 143046	  33	13.0	1	[OII],H{beta},[OIII]                                                        
+ 398	 	013.57055	-28.48976	0.29370	 	20.49	  88110	  47	13.0	1	K,H,H{beta}                                                                 
+ 399	 	013.58484	-28.47373	0.33646	 	20.63	 100938	  19	17.8	1	[OII],H{gamma},H{beta},[OIII],H{alpha}                                      
+ 400	 	013.58792	-28.46857	0.33705	 	22.74	 101115	  82	 5.8	1	[OII],H8,H,[OIII]                                                           
+ 401	 	013.57823	-28.47382	0.43365	 	20.74	 130095	  70	 7.6	1	[OII],H,H{beta}                                                             
+ 402	 	013.56331	-28.48461	0.47781	 	19.89	 143343	  43	16.9	1	[OII],H9,K,H,H{delta}                                                       
+ 403	 	013.56234	-28.48401	0.29633	 	21.76	  88899	  85	 5.5	1	[OII],H,H{alpha}                                                            
+ 404	 	013.58909	-28.45683	0.28988	 	20.83	  86964	  64	 9.3	1	K,H,G,H{beta}                                                               
+ 405	 	013.57358	-28.46862	0.60207	 	21.05	 180621	  59	10.9	1	[OII],H10,K,H                                                               
+ 406	 	013.57467	-28.46430	0.25175	 	20.96	  75525	  48	 7.7	1	[OII],K,H,H{alpha}                                                          
+ 407	 	013.69745	-28.50535	0.64297	 	20.85	 192891	  66	10.7	1	K,H                                                                         
+ 408	 	013.63629	-28.55647	0.55693	 	21.65	 167079	  30	13.7	1	[OII],H8,H,H{delta}                                                         
+ 409	 	013.67847	-28.51722	0.18370	 	20.65	  55110	  26	17.3	1	H{beta},[OIII]                                                              
+ 410	 	013.62557	-28.55801	0.64258	 	22.02	 192774	  88	 6.3	1	K,H,4000{AA}-break                                                          
+ 411	 	013.64794	-28.53437	0.50546	 	20.87	 151638	  39	13.1	1	[OII],H8,K,H,H{delta}                                                       
+ 412	 	013.62704	-28.54812	0.41950	 	20.67	 125850	 103	 6.4	1	H,4000{AA}-break,G                                                          
+ 413	 	013.63005	-28.54403	0.41938	 	21.29	 125814	  40	11.0	1	[OII],H10,H9,H                                                              
+ 414	 	013.65126	-28.51954	0.90673	 	21.31	 272019	 200	 3.7	1	MgII,[OII],H10,H9,H8,H,H{delta}                                             
+ 415	 	013.62199	-28.53687	0.07902	 	20.19	  23706	 116	 5.4	1	[OIII],H{alpha}                                                             
+ 416	 	013.61913	-28.53651	0.72724	 	21.19	 218172	 462	 3.7	1	MgII,[OII],H{beta},[OIII]                                                   
+ 417	 	013.61763	-28.52796	0.36298	 	19.28	 108894	  75	11.2	1	K,H,G,H{beta}                                                               
+ 418	 	013.60387	-28.53545	0.29410	 	20.68	  88230	  81	 8.9	1	[OII],H9,K,H,H{delta},H{alpha}                                              
+ 419	 	013.66485	-28.47930	0.42399	 	21.53	 127197	  71	12.9	1	[OII],H10,H9,K,H,H{delta}                                                   
+ 420	 	013.65489	-28.48327	0.63538	 	21.19	 190614	  31	15.6	1	[OII],H10,H9,K,H                                                            
+ 421	 	013.64218	-28.49201	0.04223	 	19.35	  12669	  10	34.5	1	H{beta},[OIII],H{alpha}                                                     
+ 422	 	013.64501	-28.48421	0.47701	 	20.42	 143103	 160	 6.9	1	[OII],H8,K,H                                                                
+ 423	 	013.61020	-28.50599	0.69374	 	22.31	 208122	 107	12.5	1	[OII],H8,K,H,[OIII]                                                         
+ 424	 	013.59502	-28.51590	0.83680	 	21.60	 251040	    	    	1	[OII],H{gamma},H{beta},[OIII]                                               
+ 425	 	013.61902	-28.49252	0.24784	 	21.82	  74352	 138	 4.4	1	K,H                                                                         
+ 426	 	013.62225	-28.47265	0.32417	 	22.12	  97251	  29	19.5	1	[OII],K,H                                                                   
+ 427	 	013.60904	-28.47893	0.58286	 	20.53	 174858	  60	16.3	1	[OII],K,H,H{delta}                                                          
+ 428	 	013.62310	-28.46140	0.82771	 	21.56	 248313	 109	 9.9	1	MgII,[OII],H9,K                                                             
+ 429	 	013.60624	-28.46914	0.95060	 	22.52	 285180	 170	 6.7	1	K,H,4000{AA}-break                                                          
+ 430	 	013.60857	-28.46350	0.95100	:	22.73	       	    	    	1	[OII]                                                                       
+ 431	 	013.57555	-28.48857	0.90702	 	22.31	 272106	 180	 5.2	1	MgII,[OII],H                                                                
+ 432	 	013.60626	-28.45947	0.44699	 	     	 134097	  95	10.6	1	K,H,G                                                                       
+ 434	 	013.58520	-28.47238	0.33557	 	22.09	 100671	  32	10.0	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 435	 	013.58345	-28.47010	0.33622	 	19.43	 100866	  29	15.7	1	[OII],K,H,H{beta},[OIII],H{alpha}                                           
+ 436	 	013.61256	-28.44044	0.44832	 	21.81	 134496	 103	 7.1	1	H9,H8,K,H                                                                   
+ 437	 	013.56546	-28.47864	0.27231	 	21.20	  81693	  16	22.4	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 438	 	013.59220	-28.45180	0.49194	 	20.99	 147582	 104	 5.4	1	K,H,G                                                                       
+ 439	 	013.54520	-28.48894	0.29599	 	21.42	  88797	  74	10.6	1	K,H                                                                         
+ 440	 	013.56730	-28.46742	0.68784	 	21.29	 206352	 267	 1.8	1	MgII,[OII],H                                                                
+ 441	 	013.58249	-28.45117	0.29001	 	20.27	  87001	  97	 6.2	1	H9,K,H                                                                      
+ 442	 	013.58298	-28.45143	0.81354	 	     	 244062	 170	 2.6	1	[OII]                                                                       
+ 443	 	013.58964	-28.44248	0.44856	 	20.92	 134568	  59	14.1	1	K,H,G,H{beta}                                                               
+ 444	 	013.43950	-28.37245	0.46992	 	20.96	 140976	  41	 7.9	1	[OII],K,H,H{beta}                                                           
+ 445	 	013.43646	-28.38408	0.68970	 	22.06	 206910	 175	 6.3	1	[OII],H9,H8,K,H                                                             
+ 446	 	013.43337	-28.38903	0.29278	 	20.87	  87834	 114	 4.6	1	G,H{beta},Mgb                                                               
+ 447	 	013.43062	-28.39244	0.29278	 	20.95	  87834	 114	 4.6	1	                                                                            
+ 448	 	013.42837	-28.42429	0.43700	 	21.18	 131100	  35	 8.2	1	K,H,H{beta},[OIII]                                                          
+ 449	 	013.42703	-28.37591	0.67435	 	21.13	 202305	 119	 5.7	1	[OII],H,H{delta}                                                            
+ 450	 	013.42420	-28.38146	0.67412	 	21.45	 202236	  89	 7.2	1	[OII],H,H{delta}                                                            
+ 451	 	013.42325	-28.42052	1.00316	 	22.07	 300948	 136	 8.3	1	K,H,4000{AA}-break,H{delta}                                                 
+ 452	 	013.41666	-28.39980	0.45041	 	22.04	 135123	  97	 3.5	1	[OII],K,H,H{beta}                                                           
+ 453	 	013.41371	-28.40310	0.20403	 	19.05	  61209	  67	10.8	1	H{beta},Mgb,E,NaD                                                           
+ 454	 	013.41025	-28.38800	0.43879	 	21.80	 131637	  27	10.7	1	[OII],H,H{gamma},H{beta},[OIII]                                             
+ 455	 	013.40761	-28.42311	0.11549	 	21.02	  34646	  27	 7.5	1	H{beta},[OIII],H{alpha}                                                     
+ 456	 	013.39989	-28.37301	0.43894	 	22.07	 131682	  80	 7.4	1	K,H,G                                                                       
+ 457	 	013.39588	-28.37750	0.45191	 	21.33	 135573	 200	 4.1	1	K,H                                                                         
+ 458	 	013.39389	-28.41119	0.53435	 	21.33	 160305	  24	16.6	1	[OII],H,H{beta},[OIII]                                                      
+ 459	 	013.39048	-28.37374	0.44916	 	21.63	 134748	 125	 4.5	1	K,H                                                                         
+ 460	 	013.38872	-28.43125	0.68834	 	21.31	 206502	  97	 8.4	1	[OII],H10,H9,H8,K,H,H{delta}                                                
+ 461	 	013.38509	-28.38292	0.13826	 	20.30	  41477	   9	27.8	1	H{beta},[OIII],H{alpha}                                                     
+ 462	 	013.38279	-28.40286	0.92208	 	21.79	 276624	 197	 5.6	1	H9,H8,K,H{delta}                                                            
+ 463	 	013.38039	-28.39091	0.48424	 	21.53	 145272	  99	 6.0	1	K,H,G                                                                       
+ 464	 	013.37451	-28.38948	0.53971	 	21.19	 161913	  15	25.5	1	[OII],K,H,H{beta}                                                           
+ 465	 	013.36898	-28.39219	0.11764	 	20.61	  35292	  12	22.7	1	H{beta},[OIII],H{alpha}                                                     
+ 466	 	013.36594	-28.40639	0.45060	:	20.11	       	    	    	1	[OII],K,H,H{beta},[OIII]                                                    
+ 467	 	013.35835	-28.43441	0.35129	 	21.80	 105387	  10	23.2	1	H{beta},[OIII]                                                              
+ 468	 	013.35665	-28.42788	0.45120	 	21.14	 135360	  11	19.3	1	H{beta},[OIII]                                                              
+ 469	 	013.35488	-28.42757	0.45265	 	21.07	 135795	  87	 7.5	1	K,H                                                                         
+ 470	 	013.35301	-28.39352	0.43437	 	22.22	 130311	  13	19.8	1	H{gamma},H{beta},[OIII]                                                     
+ 471	 	013.34881	-28.41739	0.50403	 	21.00	 151209	  12	22.5	1	[OII],H{beta},[OIII]                                                        
+ 472	 	013.34906	-28.41749	0.50412	 	     	 151236	  17	17.4	1	[OII],H{beta},[OIII]                                                        
+ 474	 	013.34021	-28.39503	0.28947	 	21.64	  86841	  19	11.2	1	H{beta},[OIII]                                                              
+ 475	 	013.33828	-28.44970	0.50467	 	20.73	 151401	  26	13.3	1	H{gamma},H{beta},[OIII]                                                     
+ 476	 	013.33535	-28.44850	0.21748	 	19.01	  65244	  49	13.2	1	[OIII],H{alpha}                                                             
+ 477	 	013.33192	-28.41450	0.11575	 	19.39	  34723	  12	21.2	1	H{beta},H{alpha}                                                            
+ 478	 	013.33023	-28.44533	0.35125	 	20.83	 105375	  39	 8.9	1	H{beta},[OIII]                                                              
+ 479	 	013.32737	-28.43673	0.60496	 	21.85	 181488	  22	14.0	1	[OII],H{beta},[OIII]                                                        
+ 480	 	013.32478	-28.38487	0.44658	 	20.32	 133974	  42	 7.8	1	[OII],H{beta},[OIII]                                                        
+ 481	 	013.32126	-28.38839	0.76563	 	20.93	 229689	 159	 7.9	1	[OII],H9,H8,K,H,H{delta}                                                    
+ 482	 	013.32023	-28.38162	0.45241	 	20.79	 135723	  36	 9.9	1	[OII],K,H,H{beta}                                                           
+ 483	 	013.31786	-28.41238	0.33000	 	22.01	  99000	  26	11.7	1	H{beta},[OIII]                                                              
+ 485	 	013.53967	-28.37938	0.27256	 	19.84	  81768	  17	16.0	2	H{delta},G,H{beta},[OIII]                                                   
+ 486	 	013.52079	-28.36849	0.29533	 	20.13	  88599	 101	 4.6	2	G,Fe43,Fe45,H{beta},Mgb                                                     
+ 487	 	013.55291	-28.40022	0.43616	 	20.52	 130846	  31	 5.8	2	[OII],K,H,H{beta}                                                           
+ 488	 	013.53517	-28.39048	0.11678	 	18.48	  35032	  65	 9.0	1	H{beta},Mgb,NaD                                                             
+ 490	 	013.52245	-28.39496	0.29030	 	19.93	  87090	 122	 5.1	1	G,Fe43,Fe45,H{beta},Mgb,E                                                   
+ 491	 	013.51744	-28.39472	0.29240	 	19.54	  87720	 106	 8.7	1	G,Fe45,H{beta},Mgb,E                                                        
+ 492	 	013.50288	-28.38738	0.29203	 	20.29	  87609	 108	 5.0	1	G,Fe43,Fe45,H{beta},Mgb,E                                                   
+ 493	 	013.51400	-28.40416	0.29362	 	     	  88085	  58	 4.2	2	G,Fe43,Ca44,Fe45,H{beta},Mgb,E                                              
+ 494	 	013.51111	-28.40416	0.29436	 	19.37	  88308	 139	 5.6	1	G,Fe43,Fe45,H{beta},Mgb,E                                                   
+ 495	 	013.74120	-28.38974	0.29233	 	     	  87699	  75	 7.2	2	G,Fe43,Fe45,H{beta},Mgb,E                                                   
+ 496	 	013.49403	-28.39964	0.29068	 	20.03	  87204	 148	 4.1	1	G,Fe45,H{beta},Mgb,E                                                        
+ 497	 	013.47943	-28.39385	0.29458	 	19.45	  88374	  87	 7.6	1	G,Fe43,Ca44,Fe45,H{beta},Mgb,E                                              
+ 498	 	013.49584	-28.42741	0.29431	 	19.88	  88293	 103	 4.9	1	G,H{beta},Mgb,E                                                             
+ 499	 	013.46996	-28.41918	0.41901	 	20.47	 125703	  11	22.2	1	[OII],H{beta},[OIII]                                                        
+ 500	 	013.45171	-28.40952	0.29382	 	19.83	  88146	 125	 5.3	1	H{delta},Fe45,H{beta},Mgb,E                                                 
+ 501	 	013.49442	-28.45022	0.29272	 	20.13	  87816	 164	 3.9	1	H{beta},Mgb,E                                                               
+ 503	 	013.49715	-28.46273	0.29159	 	20.95	  87477	 114	 3.5	1	Mgb,E                                                                       
+ 504	 	013.48137	-28.46840	0.29383	 	     	  88149	  79	11.6	1	H{beta},Mgb,E                                                               
+ 505	 	013.53282	-28.42117	0.68657	 	21.42	 205971	 124	 8.6	1	[OII],K,H,H{beta}                                                           
+ 506	 	013.52543	-28.41227	0.29297	 	20.74	  87889	  67	 5.9	2	G,Mgb                                                                       
+ 507	 	013.55394	-28.41547	0.44596	 	     	 133788	  80	 5.7	1	[OII],H                                                                     
+ 508	 	013.54494	-28.39885	0.44603	 	19.62	 133809	  71	 6.2	1	[OII],K,H                                                                   
+ 509	 	013.51412	-28.40401	0.29157	 	     	  87471	 187	 6.5	1	G,Fe43,Fe45,H{beta},Mgb                                                     
+ 510	 	013.51396	-28.40356	0.29350	 	     	       	    	    	1	Fe43,Fe45,H{beta},Mgb                                                       
+ 511	 	013.51370	-28.40299	0.29290	 	     	       	    	    	1	H{beta},Mgb                                                                 
+ 512	 	013.51309	-28.39797	0.29256	 	19.14	  87768	 105	 7.8	1	G,Fe43,Fe45,H{beta},Mgb,E                                                   
+ 513	 	013.50141	-28.39390	0.28637	 	20.16	  85911	  92	 6.2	1	G,H{beta},Mgb,E                                                             
+ 516	 	013.53013	-28.35934	0.07437	 	18.98	  22311	  36	 5.2	1	                                                                            
+ 517	 	013.52170	-28.35825	0.18350	 	18.20	  55049	  65	 6.3	1	H{beta},Mgb,NaD                                                             
+ 518	 	013.50696	-28.35644	0.29156	 	18.95	  87468	 151	 3.0	1	G,Fe43,Fe45,H{beta},Mgb                                                     
+ 519	 	013.50437	-28.35429	0.44712	 	18.53	 134136	 132	 6.9	1	K,H,G,Fe43,Fe45,H{beta},Mgb                                                 
+ 520	 	013.50580	-28.35107	0.44624	 	20.83	 133872	  44	17.0	1	G,Fe43,Fe45,H{beta},Mgb                                                     
+ 523	 	013.47140	-28.34922	0.44700	 	20.07	 134100	 182	 3.9	1	H,G,Fe43,H{beta},Mgb                                                        
+ 524	 	013.46836	-28.34444	0.68695	 	21.04	 206085	 199	 5.7	1	K,H,4000{AA}-break                                                          
+ 525	 	013.53562	-28.32498	0.39470	 	     	 118410	  86	 5.9	1	[OII],K,H,G,H{beta}                                                         
+ 526	 	013.45170	-28.34410	0.44701	 	20.61	 134103	 152	 3.8	1	G,Fe43,H{beta},Mgb                                                          
+ 527	 	013.47187	-28.33570	0.45081	 	20.26	 135243	  34	16.2	1	K,H,H{beta},[OIII]                                                          
+ 528	 	013.50005	-28.32228	0.62839	 	     	 188517	 257	 5.6	1	K,H,4000{AA}-break,G                                                        
+ 529	 	013.47740	-28.32738	0.43607	 	20.03	 130821	 118	 4.4	1	K,H,4000{AA}-break,G                                                        
+ 530	 	013.47495	-28.32497	0.44892	 	20.01	 134676	 171	 3.3	1	K,H,G,Mgb                                                                   
+ 531	 	013.44463	-28.37570	0.82328	 	     	 246984	 187	 3.3	1	MgII,[OII],H9,H8                                                            
+ 532	 	013.56244	-28.36894	0.67486	 	23.19	 202458	  54	 6.4	1	[OII],H9,H                                                                  
+ 533	 	013.54760	-28.37619	-0.0001	 	21.40	    -30	 126	 4.3	1	                                                                            
+ 535	 	013.53035	-28.37163	0.37660	 	22.59	 112980	  65	 6.1	1	[OII],K,H,H{beta},[OIII]                                                    
+ 536	 	013.54294	-28.39838	0.20409	 	23.07	  61227	  26	12.5	1	H{beta},[OIII],H{alpha}                                                     
+ 537	 	013.52621	-28.38399	1.60061	 	22.63	 480180	 581	 4.2	1	AlIII,FeII24,FeII26,MgII                                                    
+ 538	 	013.52367	-28.38911	0.29084	 	21.82	  87251	  49	12.0	2	K,H                                                                         
+ 539	 	013.51667	-28.39395	0.00002	 	21.81	      6	  72	 8.0	1	                                                                            
+ 540	 	013.50544	-28.39836	0.31104	 	21.97	  93312	 189	 6.0	1	K,H                                                                         
+ 541	 	013.49809	-28.41351	0.10983	 	22.76	  32948	  28	13.4	1	H{beta},[OIII],H{alpha}                                                     
+ 542	 	013.51241	-28.44480	0.49122	 	20.71	 147366	 150	 5.9	1	K,H,H{delta}                                                                
+ 543	 	013.47082	-28.40789	0.23032	 	22.20	  69096	  34	 8.6	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 544	 	013.45856	-28.39777	0.77772	 	21.07	 233316	1316	 0.6	1	MgII,[OII]                                                                  
+ 545	 	013.45827	-28.39786	0.77903	 	     	 233709	 728	 0.5	1	MgII,[OII],K,H                                                              
+ 546	 	013.46526	-28.40883	1.46070	:	22.53	 438219	 477	 3.5	1	MgII,?                                                                      
+ 547	 	013.45579	-28.41263	0.53394	 	21.46	 160182	  36	25.1	1	K,H,G                                                                       
+ 548	 	013.45704	-28.42523	0.28902	 	23.68	  86706	  52	 6.3	1	[OII],[OIII]                                                                
+ 549	 	013.46362	-28.44286	0.55844	 	     	 167532	  39	 9.6	1	[OII],H,[OIII]                                                              
+ 550	 	013.44785	-28.42731	-0.0006	 	22.06	   -180	 121	 5.8	1	                                                                            
+ 551	 	013.29928	-28.43122	0.44418	 	22.06	 133254	  82	 6.7	1	[OII],K,H{beta},[OIII]                                                      
+ 552	 	013.28878	-28.43489	0.50202	 	21.52	 150606	 150	 4.6	1	H,G,H{beta}                                                                 
+ 553	 	013.32193	-28.43647	0.67152	 	21.43	 201456	  63	 5.3	1	[OII],H10,H9,H8,K,H,H{beta}                                                 
+ 554	 	013.30800	-28.44001	0.50360	:	19.90	       	    	    	1	AlIII,K,H,G                                                                 
+ 556	 	013.29380	-28.44445	0.38610	 	20.74	 115830	 101	 6.4	1	[OII],H9,H8,H,H{beta}                                                       
+ 557	 	013.36991	-28.44614	0.41354	 	22.40	 124062	  50	 7.0	1	[OII],H9,H{beta},[OIII],H{alpha}                                            
+ 558	 	013.33559	-28.44980	0.50526	 	21.43	 151578	  50	 6.7	1	[OII],H9,K,H,H{beta},[OIII]                                                 
+ 559	 	013.33881	-28.45127	0.50567	 	21.24	 151701	  47	 7.6	1	[OII],H9,H{beta},[OIII]                                                     
+ 560	 	013.32516	-28.45768	0.11731	 	16.85	  35194	 157	 5.4	1	G,H{beta},Mgb,NaD                                                           
+ 562	 	013.37133	-28.46165	0.49072	 	20.44	 147216	  97	 6.8	1	K,H,4000{AA}-break,G                                                        
+ 563	 	013.33078	-28.46810	0.10508	 	17.58	  31524	  26	13.3	1	H{delta},G,Mgb,NaD,H{alpha}                                                 
+ 564	 	013.31684	-28.46901	0.29016	 	20.73	  87048	  21	15.2	1	[OII],H{delta},H{gamma},H{beta},[OIII],H{alpha}                             
+ 565	 	013.33838	-28.47160	0.60408	 	20.40	 181224	  85	 9.4	1	K,H,4000{AA}-break,G                                                        
+ 566	 	013.30246	-28.47460	0.48003	 	20.70	 144009	  99	 9.5	1	K,H,4000{AA}-break,G                                                        
+ 567	 	013.28674	-28.47637	0.44478	 	20.57	 133434	 134	 7.6	1	weak,[OII],H8,K,H                                                           
+ 568	 	013.30732	-28.47911	0.23908	 	20.79	  71724	  46	 7.3	1	[OII],[OIII],H{alpha}                                                       
+ 569	 	013.28495	-28.48913	0.58821	 	24.32	 176463	 244	 1.9	1	[OII],H,H{delta}                                                            
+ 570	 	013.29468	-28.48264	0.24845	 	18.99	  74535	  67	12.3	1	K,H,4000{AA}-break,H{delta},G,H{beta}                                       
+ 571	 	013.32118	-28.48371	0.24825	 	19.52	  74475	  78	10.6	1	K,H,H{delta},G                                                              
+ 572	 	013.32238	-28.48662	0.21779	 	19.14	  65337	  13	32.0	1	[OII],H10,H9,H8,K,H,H{beta},[OIII],H{alpha}                                 
+ 573	 	013.28543	-28.48821	0.59232	 	20.79	 177696	  72	 7.0	1	[OII],K,H,H{gamma}                                                          
+ 574	 	013.33267	-28.49327	0.60429	 	22.34	 181287	 107	 7.2	1	K,H,4000{AA}-break                                                          
+ 575	 	013.36515	-28.49931	0.59650	 	20.32	 178950	  61	 7.8	1	[OII],H9,H8,K,H,H{delta},G                                                  
+ 576	 	013.31966	-28.50302	0.43450	 	20.92	 130350	 108	 6.7	1	K,H,G,H{beta}                                                               
+ 577	 	013.35939	-28.50544	0.30456	 	21.89	  91368	  23	13.9	1	[OII],H9,H8,K,H,H{beta},[OIII],H{alpha}                                     
+ 578	 	013.30279	-28.50803	0.59829	 	21.29	 179487	 150	 5.6	1	weak,[OII],K,H,4000{AA}-break                                               
+ 579	 	013.34782	-28.51001	0.40572	 	21.43	 121716	  98	 5.3	1	[OII],H9,K,H,H{beta},[OIII]                                                 
+ 580	 	013.34982	-28.51251	0.49115	 	21.34	 147345	 100	 6.3	1	[OII],H9,K,H,H{delta}                                                       
+ 582	 	013.32149	-28.51765	0.31798	 	20.69	  95394	  24	13.1	1	[OII],NeIII,H8,H{epsilon},H{delta},H{gamma},H{beta},[OIII],H{alpha},HeI,NIII
+ 583	 	013.36378	-28.51890	0.46606	 	20.28	 139818	  40	15.2	1	K,H,H{delta},G                                                              
+ 584	 	013.30552	-28.52112	0.11612	 	20.67	  34834	  58	 9.4	1	G,H{beta},E                                                                 
+ 585	 	013.29363	-28.52293	0.11702	 	20.69	  35104	  30	13.2	1	H{beta},[OIII],H{alpha}                                                     
+ 586	 	013.35749	-28.52517	0.90709	 	21.95	 272127	 240	 2.7	1	MgII,[OII]                                                                  
+ 587	 	013.29596	-28.52792	0.30150	 	20.84	  90450	  46	 7.1	1	[OII],H9,H,H{beta},[OIII]                                                   
+ 588	 	013.35531	-28.53139	0.21802	 	     	  65406	 130	 4.3	1	K,H,Mgb                                                                     
+ 589	 	013.31441	-28.53172	0.42394	 	20.11	 127182	  96	 6.2	1	[OII],H9,H,H{delta}                                                         
+ 590	 	013.35848	-28.53604	0.41320	 	20.15	 123960	  50	13.8	1	K,H,H{delta},G                                                              
+ 591	 	013.33460	-28.53758	1.00825	 	     	 302475	 248	22.2	1	broad,MgII,[OII],(QSO)                                                      
+ 593	 	013.33506	-28.54100	0.16227	 	21.29	  48680	  16	19.3	1	H{beta},[OIII],H{alpha}                                                     
+ 594	 	013.31624	-28.54296	0.50262	 	21.61	 150786	  88	 4.4	1	[OII],H,[OIII]                                                              
+ 595	 	013.33407	-28.54575	0.37712	 	20.24	 113136	  55	 9.3	1	[OII],H11,H10,H9,H8,K,H,H{delta},H{beta},[OIII]                             
+ 596	 	013.36309	-28.25565	0.46169	 	20.68	 138507	 206	 4.1	1	H9,H,G                                                                      
+ 597	 	013.40396	-28.25672	0.60492	 	21.94	 181476	  59	 9.3	1	[OII],H9,H8,H{delta}                                                        
+ 598	 	013.43903	-28.25905	0.43251	 	20.02	 129753	  87	 9.3	1	K,H,G                                                                       
+ 599	 	013.40906	-28.26096	0.36334	 	21.54	 109002	  23	15.5	1	[OII],K,H,H{beta},[OIII]                                                    
+ 600	 	013.44424	-28.26240	0.23880	 	21.21	  71640	  56	 7.9	1	[OII],K,H,[OIII],H{alpha}                                                   
+ 601	 	013.39367	-28.26509	0.29396	 	20.80	  88188	  93	13.8	1	K,H                                                                         
+ 602	 	013.37144	-28.26707	0.44467	 	21.52	 133401	 119	 3.6	1	[OII],K,H                                                                   
+ 603	 	013.43359	-28.26942	0.39429	 	20.54	 118287	  46	16.6	1	K,H,G,H{beta}                                                               
+ 604	 	013.37209	-28.27085	0.10444	 	20.88	  31331	  47	 9.7	1	H{beta},[OIII],H{alpha}                                                     
+ 605	 	013.44571	-28.27252	0.29263	 	20.26	  87789	 110	 5.1	1	K,H,H{beta},Mgb                                                             
+ 606	 	013.44334	-28.27694	0.43747	 	21.45	 131241	  84	 7.9	1	[OII],K,H,4000{AA}-break                                                    
+ 608	 	013.44256	-28.28138	0.60245	 	21.12	 180735	 244	 4.3	1	weak,[OII],K,H,4000{AA}-break                                               
+ 609	 	013.43403	-28.28287	0.16849	 	21.14	  50547	  19	18.9	1	H{beta},[OIII],H{alpha}                                                     
+ 610	 	013.42432	-28.28760	0.43718	 	20.33	 131154	  28	22.5	1	[OII],H9,H8,K,H                                                             
+ 611	 	013.41989	-28.28919	0.43621	 	20.39	 130863	  34	16.2	1	[OII],H8,K,H,H{delta}                                                       
+ 612	 	013.43375	-28.29039	0.72120	 	21.88	 216360	 232	 1.8	1	[OII],[OIII]                                                                
+ 613	 	013.43289	-28.29317	0.77316	 	21.75	 231948	 370	 1.1	1	[OII],H9,H8,K                                                               
+ 616	 	013.43384	-28.29149	0.28860	 	24.29	  86580	    	    	1	H{beta},[OIII],H{alpha}                                                     
+ 617	 	013.40676	-28.30443	0.36360	 	19.63	 109080	  52	13.2	1	K,H,G                                                                       
+ 618	 	013.40083	-28.30486	0.36360	 	20.57	 109080	  52	13.2	1	                                                                            
+ 619	 	013.43250	-28.30675	0.35190	 	21.63	 105570	    	    	1	[OII],H,H{beta},[OIII]                                                      
+ 620	 	013.40585	-28.31066	0.37458	 	20.07	 112374	  87	 8.8	1	[OII],K,H,H{beta},H{alpha}                                                  
+ 621	 	013.41301	-28.31621	0.58712	 	21.40	 176136	 131	 9.7	1	[OII],K                                                                     
+ 622	 	013.43109	-28.31877	0.68868	 	21.89	 206604	 626	 0.5	1	[OII],H{beta}                                                               
+ 623	 	013.41073	-28.32327	0.68768	 	22.45	 206304	 388	 5.2	1	H,4000{AA}-break                                                            
+ 624	 	013.42228	-28.32599	0.58173	 	22.61	 174519	  34	12.1	1	[OII],H{beta},[OIII]                                                        
+ 625	 	013.43688	-28.32771	0.64995	 	22.74	 194985	  86	 5.7	1	[OII],[OIII]                                                                
+ 626	 	013.42106	-28.37130	0.24830	 	20.98	  74490	    	    	1	[OII],H8,K,H                                                                
+ 627	 	013.44372	-28.33028	0.95893	 	22.01	 287679	1472	 0.4	1	MgII,[OII]                                                                  
+ 628	 	013.36637	-28.33172	0.47571	 	20.84	 142713	  76	 8.8	1	[OII],H8,K,H                                                                
+ 629	 	013.37752	-28.33390	0.50187	 	21.84	 150561	  37	13.6	1	[OII],H,H{beta}                                                             
+ 630	 	013.38693	-28.33677	0.18625	 	20.57	  55875	  39	 7.8	1	K,H,H{beta},[OIII],H{alpha}                                                 
+ 631	 	013.38685	-28.33903	0.82422	 	21.97	 247266	1383	 0.3	1	(Fe26),MgII,[OII],H8,H                                                      
+ 632	 	013.43905	-28.25867	0.36600	 	     	 109800	    	    	1	[OII]                                                                       
+ 633	 	013.45333	-28.34474	0.68740	 	20.91	 206220	 431	 1.1	1	MgII,[OII],H9,H,H{beta}                                                     
+ 634	 	013.36557	-28.34674	0.64627	 	22.25	 193881	 456	 3.6	1	weak,[OII],H,4000{AA}-break                                                 
+ 635	 	013.41893	-28.34935	0.68197	 	22.24	 204591	  22	18.2	1	[OII],H9,H{beta},[OIII]                                                     
+ 636	 	013.43390	-28.35132	0.50302	 	21.02	 150906	 130	 6.2	1	[OII],H9,K,H                                                                
+ 637	 	013.43428	-28.35256	0.68906	 	21.42	 206718	 188	15.8	1	AlII,K,H,4000{AA}-break                                                     
+ 638	 	013.44857	-28.35452	0.41489	 	21.09	 124467	  78	10.9	1	[OII],H9,H                                                                  
+ 639	 	013.44864	-28.35545	1.21960	 	22.57	 365880	 276	 4.7	1	(Fe24),(Fe26),MgII,[OII]                                                    
+ 640	 	013.36800	-28.35741	0.25470	 	20.93	  76410	    	    	1	[OII],H{beta},[OIII]                                                        
+ 641	 	013.36753	-28.35774	0.29500	 	21.39	  88500	 140	 1.9	1	[OII],[OIII]                                                                
+ 642	 	013.38274	-28.35940	0.49269	 	19.66	 147807	  53	 9.2	1	[OII],H10,H{gamma},H{beta},[OIII]                                           
+ 643	 	013.36645	-28.36076	0.16907	 	18.54	  50721	 384	 3.1	1	H8,K,H,4000{AA}-break                                                       
+ 644	 	013.41810	-28.36464	0.43582	 	21.61	 130746	 182	 4.5	1	[OII],H9,K,H                                                                
+ 645	 	013.37350	-28.36604	0.11732	 	19.99	  35194	  61	 6.1	1	H{beta},[OIII],H{alpha}                                                     
+ 646	 	013.37400	-28.36859	0.34536	 	21.07	 103608	 121	 2.6	1	[OII],H,H{beta},[OIII]                                                      
+ 647	 	013.62250	-28.31452	0.10485	 	20.11	  31453	  16	23.1	1	H{beta},[OIII],H{alpha}                                                     
+ 648	 	013.62110	-28.30843	0.63011	 	20.72	 189033	 114	 4.8	1	K,H,4000{AA}-break,G                                                        
+ 649	 	013.61889	-28.28788	0.40870	 	20.67	 122610	  61	14.4	1	K,H,4000{AA}-break,G                                                        
+ 650	 	013.61623	-28.30046	0.07495	 	22.08	  22485	  22	13.7	1	H{beta},[OIII],H{alpha}                                                     
+ 651	 	013.61171	-28.31996	0.52050	 	21.87	 156150	 109	 7.7	1	[OII],H9,H,H{delta}                                                         
+ 652	 	013.60846	-28.30099	0.64420	 	22.16	 193260	  63	10.6	1	K,H,G                                                                       
+ 653	 	013.60537	-28.33924	0.27295	 	19.85	  81885	  35	11.4	1	[OII],H9,H8,K,H,H{beta},H{alpha}                                            
+ 654	 	013.60359	-28.31304	0.44743	 	21.19	 134229	  33	13.7	1	[OII],H9,K,H,H{beta},[OIII]                                                 
+ 655	 	013.60129	-28.32033	0.11603	 	20.74	  34808	  26	18.6	1	H{beta},[OIII],H{alpha}                                                     
+ 656	 	013.60002	-28.34313	0.44692	 	20.83	 134076	  80	 7.4	1	[OII],K,H                                                                   
+ 657	 	013.59788	-28.34095	0.12998	 	20.92	  38993	  23	15.8	1	H{beta},[OIII],H{alpha}                                                     
+ 658	 	013.58580	-28.26582	0.43422	 	21.14	 130266	 138	 3.5	1	[OII],K,H                                                                   
+ 659	 	013.58350	-28.27900	0.19913	 	20.41	  59738	  39	 9.5	1	K,H,H{alpha}                                                                
+ 660	 	013.58136	-28.31302	0.40757	 	20.13	 122271	  86	 7.5	1	[OII],H9,H8,K,H{delta},H{beta}                                              
+ 661	 	013.57529	-28.28594	0.24836	 	20.09	  74508	  46	10.6	1	[OII],K,H,G                                                                 
+ 662	 	013.57333	-28.29523	0.77476	 	21.73	 232428	 195	 3.1	1	[OII],H9,H8,H,H{beta}                                                       
+ 663	 	013.57007	-28.26596	0.39036	 	20.85	 117108	 121	 8.2	1	K,H,G                                                                       
+ 664	 	013.56699	-28.27727	0.39147	 	20.00	 117441	  50	11.6	1	[OII],H8,K,H,H{delta},H{beta},[OIII]                                        
+ 667	 	013.55648	-28.34420	0.60166	 	21.41	 180498	  55	10.3	1	K,H,H{delta},G                                                              
+ 668	 	013.55084	-28.33931	0.41463	 	21.18	 124389	  33	14.1	1	[OII],H8,H,H{beta},[OIII]                                                   
+ 669	 	013.54648	-28.29235	0.62999	 	21.09	 188997	  50	14.2	1	[OII],H9,H8,K,H,H{delta}                                                    
+ 670	 	013.54500	-28.32859	0.44652	 	21.18	 133956	  50	15.3	1	K,H,G                                                                       
+ 671	 	013.54307	-28.25845	0.67433	 	21.49	 202299	  47	12.8	1	[OII],K,H                                                                   
+ 672	 	013.54095	-28.30963	0.39123	 	21.31	 117369	 118	 4.6	1	[OII],H,H{alpha}                                                            
+ 673	 	013.53620	-28.32505	0.39478	 	19.36	 118434	  81	10.7	1	[OII],H9,K,H,H{alpha}                                                       
+ 674	 	013.53372	-28.28433	0.11633	 	19.26	  34898	 142	 4.0	1	G,H{beta},Mgb,E                                                             
+ 675	 	013.53171	-28.29302	0.11623	 	19.67	  34869	  16	17.0	1	[OIII],H{alpha},NII                                                         
+ 676	 	013.52743	-28.31836	0.60285	 	21.37	 180855	  51	13.2	1	[OII],H9,H                                                                  
+ 677	 	013.52463	-28.28270	0.29465	 	19.84	  88395	  55	 6.5	1	weak,[OII],K,H                                                              
+ 678	 	013.52276	-28.25795	0.11746	 	20.77	  35239	  22	15.3	1	H{beta},[OIII],H{alpha}                                                     
+ 679	 	013.51937	-28.33883	0.29266	 	20.86	  87798	  21	15.5	1	[OII],K,H                                                                   
+ 680	 	013.51586	-28.29246	0.11622	 	18.82	  34866	  17	23.6	1	H{gamma},H{beta},[OIII],H{alpha}                                            
+ 681	 	013.51161	-28.32485	0.29088	 	19.94	  87264	  34	30.6	1	K,H,G,H{beta},Mgb                                                           
+ 682	 	013.50947	-28.25957	0.29135	 	20.43	  87405	  57	13.5	1	K,H,H{beta}                                                                 
+ 683	 	013.50735	-28.32775	0.68454	 	21.48	 205362	  40	 9.4	1	[OII],H9,H8,K,H,H{beta}                                                     
+ 684	 	013.50564	-28.32884	0.49262	 	21.42	 147786	 120	 5.0	1	[OII],H8,K,H,H{delta}                                                       
+ 685	 	013.50069	-28.32229	0.62798	 	20.41	 188394	 109	 6.6	1	K,H,4000{AA}-break,G                                                        
+ 686	 	013.49898	-28.27390	0.39094	 	21.25	 117282	  28	11.1	1	[OII],H9,H{delta},H{beta},[OIII]                                            
+ 687	 	013.49511	-28.26181	0.34425	 	20.51	 103275	  23	19.4	1	[OII],K,H,H{beta},[OIII]                                                    
+ 689	 	013.65061	-28.33845	0.46661	 	21.11	 139983	 121	 6.2	1	[OII],H8,H                                                                  
+ 690	 	013.65704	-28.33561	0.72521	 	21.20	 217563	 185	 8.5	1	K,H,4000{AA}-break,G                                                        
+ 691	 	013.69575	-28.33440	0.09462	 	21.52	  28386	  40	 9.6	1	[OIII],H{alpha}                                                             
+ 692	 	013.66601	-28.33118	0.77813	 	21.92	 233439	 220	 7.6	1	[OII],K                                                                     
+ 693	 	013.70628	-28.32961	0.36256	 	20.95	 108768	  22	15.2	1	[OII],NeIII,H{epsilon},H{gamma},H{beta},[OIII],H{alpha}                     
+ 694	 	013.70639	-28.33004	0.36311	 	     	 108933	  41	13.2	1	[OII],H8,K,H                                                                
+ 695	 	013.68400	-28.32776	0.46731	 	20.41	 140193	  89	 7.2	1	K,H,H{delta},H{beta}                                                        
+ 696	 	013.64133	-28.32499	0.28962	 	20.60	  86886	  63	 9.0	1	[OII],H9,K,H,H{delta}                                                       
+ 697	 	013.71378	-28.32262	0.39393	 	19.64	 118179	  49	 9.1	1	[OII],H{beta},H{alpha}                                                      
+ 698	 	013.71856	-28.31994	0.07467	 	21.35	  22400	  15	24.7	1	H{beta},[OIII],H{alpha}                                                     
+ 699	 	013.65768	-28.31833	0.20420	 	20.42	  61260	  63	 8.9	1	H9,H8,K,H,H{delta},H{beta}                                                  
+ 700	 	013.65932	-28.31474	0.07505	 	17.43	  22514	  56	 9.9	1	G,Fe43,Fe45,[OIII],Mgb,NaD                                                  
+ 701	 	013.69148	-28.31276	0.32435	 	19.22	  97305	  87	 9.4	1	K,H,H{delta},G                                                              
+ 702	 	013.68659	-28.31208	0.29309	 	20.96	  87927	  21	18.9	1	[OII],H,H{beta},[OIII]                                                      
+ 703	 	013.69939	-28.30975	0.55979	 	21.13	 167937	  78	 7.1	1	[OII],K,H                                                                   
+ 704	 	013.71400	-28.32107	0.20401	 	20.90	  61203	  42	11.8	1	H{beta},[OIII],H{alpha}                                                     
+ 705	 	013.68460	-28.30750	0.55579	 	20.78	 166737	  96	 7.2	1	K,H,4000{AA}-break                                                          
+ 706	 	013.68446	-28.30532	0.36214	 	19.72	 108642	  99	 8.5	1	weak,[OII],K,H,G                                                            
+ 707	 	013.62897	-28.30213	0.29225	 	21.73	  87675	  30	13.6	1	[OII],H,[OIII]                                                              
+ 708	 	013.69512	-28.30110	0.56189	 	21.05	 168567	  26	19.0	1	[OII],H9,K,H                                                                
+ 710	 	013.66272	-28.29561	0.77892	 	21.34	 233676	  81	 9.2	1	MgII,[OII],H9,H8,H{gamma},H{beta}                                           
+ 711	 	013.69533	-28.29441	0.56112	 	20.99	 168336	 212	 7.0	1	K,H,4000{AA}-break                                                          
+ 713	 	013.71136	-28.28575	0.55535	 	22.20	 166605	  21	18.3	1	[OII],H,H{delta},H{beta},[OIII]                                             
+ 714	 	013.67491	-28.28222	2.41534	 	     	 724599	 210	26.8	1	QSO,SiIV/OIV,CIV,CIII                                                       
+ 715	 	013.69037	-28.28067	0.55977	 	20.83	 167931	  57	 7.1	1	[OII],H9,H8,K,H                                                             
+ 716	 	013.68500	-28.27834	0.43701	 	20.05	 131103	 130	 5.9	1	[OII],K,H,4000{AA}-break                                                    
+ 717	 	013.67647	-28.27699	0.91643	 	22.85	 274929	  74	11.0	1	[OII]                                                                       
+ 718	 	013.66457	-28.27413	0.43955	 	20.32	 131865	 103	 6.5	1	K,H,G                                                                       
+ 719	 	013.65764	-28.27234	0.26502	 	19.51	  79506	  41	12.2	1	[OII],H11,H10,H9,H8,K,H,H{delta},H{beta},[OIII],H{alpha}                    
+ 720	 	013.64307	-28.26919	0.43606	 	20.32	 130818	  96	 9.6	1	[OII],K,H                                                                   
+ 721	 	013.63038	-28.26398	0.62972	 	20.76	 188916	  73	 5.5	1	K,H,4000{AA}-break,G                                                        
+ 722	 	013.69932	-28.26123	1.21050	:	20.99	 363150	 234	17.5	1	broad,MgII,(QSO)                                                            
+ 723	 	013.68882	-28.25953	0.23031	 	20.83	  69093	  16	20.7	1	[OII],H9,H8,K,H,H{delta},H{beta},[OIII],H{alpha}                            
+ 724	 	013.66411	-28.25705	0.23168	 	21.07	  69504	  36	13.5	1	[OII],H8,H,H{beta},[OIII],H{alpha}                                          
+ 725	 	013.69168	-28.25586	0.23010	 	20.86	  69030	  29	14.1	1	[OII],H{beta},[OIII],H{alpha}                                               
+ 726	 	013.68356	-28.25310	0.53829	 	21.70	 161487	  57	13.4	1	weak,[OII],H9,K,H                                                           
+ 727	 	013.69381	-28.25005	0.23060	 	22.59	  69180	  81	 5.9	1	[OII],[OIII],H{alpha}                                                       
+ 728	 	013.63751	-28.24698	0.43742	 	20.76	 131226	  73	 7.4	1	[OII],H9,H8,K,H,H{beta}                                                     
+ 729	 	013.66580	-28.24412	0.43187	 	20.19	 129561	  57	 8.3	1	[OII],H10,H9,K,H                                                            
+ 730	 	013.67719	-28.24009	0.55034	 	21.54	 165102	  22	16.1	1	[OII],H{gamma},H{beta},[OIII]                                               
+ 731	 	013.66880	-28.23844	0.54998	 	21.06	 164994	 105	 5.4	1	weak,[OII],H9,H,4000{AA}-break                                              
+ 732	 	013.71984	-28.23666	0.16176	 	19.24	  48526	  18	19.9	1	H{gamma},H{beta},[OIII]                                                     
+ 733	 	013.63351	-28.23504	0.19553	 	19.77	  58660	  27	13.9	1	K,H,H{beta},[OIII]                                                          
+ 734	 	013.68083	-28.23290	0.23012	 	     	  69036	  71	 7.2	1	[OII],H9,K,H                                                                
+ 735	 	013.69958	-28.23161	0.36169	 	19.28	 108507	 107	 8.2	1	K,H,G,H{beta}                                                               
+ 736	 	013.66431	-28.22849	0.55777	 	21.64	 167331	  31	10.5	1	[OII],H9,H{beta},[OIII]                                                     
+ 737	 	013.62722	-28.22692	0.52001	 	21.40	 156003	  53	10.2	1	[OII],K,H                                                                   
+ 738	 	013.64370	-28.22527	0.56044	 	19.73	 168132	 126	 7.1	1	K,H,4000{AA}-break,G                                                        
+1009	 	013.52353	-28.42682	0.29040	 	18.60	  87120	    	    	1	                                                                            
+1011	 	013.51676	-28.40425	0.29340	 	18.26	  88020	    	    	1	                                                                            
+1012	 	013.51470	-28.40379	0.29290	 	17.34	  87870	    	    	1	                                                                            
+1018	 	013.49151	-28.38977	0.29250	 	19.62	  87750	    	    	1	                                                                            
+1020	 	013.48143	-28.40368	0.29390	 	20.71	  88170	    	    	1	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
