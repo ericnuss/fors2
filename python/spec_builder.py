@@ -28,7 +28,7 @@ def merge_spectra(spec, files, savedir):
     all_list=[]
     for f in files:
         x, y, m, yy, comments = open_spec_file(f)
-        print x[0], x[-1],len(x), len(y), len(m), len(yy)
+        print(x[0], x[-1],len(x), len(y), len(m), len(yy))
         obs, slit, z, lines_list, spec = parse_comments(comments)
         weight = obs_weight[obs]
         spec_count += weight
@@ -82,7 +82,7 @@ def run_merge_spectra(input_dir='2*/SPEC*',savedir='./merged'):
                 opt=(ynew*ysave).sum()/(ysave*ysave).sum()
             plt.plot(x,yy/opt, label=d[idx])
             s += " %s : %f, "%(d[idx],opt)
-        print s
+        print(s)
         plt.title('SPEC%sn.txt'%uu)
         plt.legend()
         plt.savefig('merged/SPEC%sn.png'%uu)
@@ -200,7 +200,6 @@ def run_on_spec(obs, slit, spec, datadir, show=False, save=True, savedir='.'):
     z,lines=get_catalog_info(spec,cat)
     if z<=0:
         outstr += "z<=0 in cat, with lines %s. Maybe a star?"%lines
-        print outstr
         #return [], [], z, lines
 
     filename=os.path.join(datadir,"%s"%obs,"SPEC%sn.txt"%slit)
@@ -208,16 +207,18 @@ def run_on_spec(obs, slit, spec, datadir, show=False, save=True, savedir='.'):
     if not os.path.exists(filename):
         unormalized=os.path.join(datadir,"%s"%obs,"SPEC%s.txt"%slit)
         if os.path.exists(unormalized):
+            print(outstr)
             try:
                 x,y = do_normalize(unormalized)
-            except Exception,e:
-                print(e, 'for slit %s'%slit)
+            except Exception as e:
+                print(('{0} for slit %s'%slit).format(str(e)))
                 return [], [], z, lines
         else:
             outstr += "%s does not exists, not creating %s"%(unormalized, 'SPEC%sn.txt'%spec)
-            print outstr
+            print(outstr)
             return [], [], z, lines
     else:
+        print(outstr)
         x,y=np.loadtxt(filename,unpack=True)
         
     x, yy, lines_list = mask_and_save(x,y,obs,spec,z,lines,show, save, savedir)
@@ -261,7 +262,7 @@ def weighted_average(a,b,w1,w2):
     
 def average(x1,y1,x2,y2,w1,w2):
     #print len(x1),len(x2)
-    print x1,x2,len(x1),len(x2)
+    print(x1,x2,len(x1),len(x2))
     if len(x1)==len(x2):
         if np.all(np.isclose(x1,x2)):
             yc,coeff = weighted_average(y1,y2,w1,w2)
@@ -282,27 +283,23 @@ def average(x1,y1,x2,y2,w1,w2):
         yc, coeff = weighted_average(yy1, yy2,w1,w2)
         xc = xx1
     else:
-        print "recursing..."
+        print("recursing...")
         xc,yc, coeff = average(xx1,yy1,xx2,yy2,w1,w2)
         
     xg = x1[x1<x_1] if i==1 else x2[x2<x_1]
     if i==1:
-        print 'toto1'
         idx=np.where(x1<x_1)[0][-1]
         yg = y1[x1<x_1] *yc[0:10].mean()/y1[idx]
-        print yc[0:10].mean(),y1[idx], y1[x1<x_1].mean()
+        print(yc[0:10].mean(),y1[idx], y1[x1<x_1].mean())
     else:
-        print 'toto2'
         idx=np.where(x2<x_1)[0][-1]
         yg = y2[x2<x_1]*yc[0:10].mean()/y2[idx]
 
     xd = x2[x2>x_2] if j==1 else x1[x1>x_2]
     if j==1:
-        print 'toto3'
         idx=np.where(x2>x_2)[0][0]
         yd = y2[x2>x_2]*yc[-10:-1].mean()/y2[idx]
     else:
-        print 'toto4'
         idx = np.where(x1>x_2)[0][0]
         yd = y1[x1>x_2]*yc[-10:-1].mean()/y1[idx]
     
@@ -326,7 +323,7 @@ def merge_files(filenames, obses, weights, spec,z,lines,show=False, save=True, s
         return
     else:
         outstr += 'merging '
-        print outstr, filenames
+        print(outstr, filenames)
         try:
             x1, y01, m1, y1, c1 = open_spec_file(filenames[0])
         except ValueError:
@@ -418,7 +415,7 @@ def run_all(obs, datadir, savedir, show=False, save=True):
         spec=str(spec_ids[i])
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
 
-def check_specifics(obs_slits,spec, datadir, show, save, savedir):
+def check_specifics(obs_slits,spec, datadir, show, save, savedir, workdir):
     # if '255720-25fits:39' in obs_slits:
     #     print '255720-25fits:39 is ugly compared to 255730-33:38 : using only the latter'
     #     obs,slit='255730-33:38'.split(':')
@@ -445,16 +442,16 @@ def check_specifics(obs_slits,spec, datadir, show, save, savedir):
     #     x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     if '255728:21' in obs_slits:
         #confirmed
-        print '255728:21 is ugly compared to 255761:23 : using only the latter'
+        print('255728:21 is ugly compared to 255761:23 : using only the latter')
         obs,slit='255761:23'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255728:8' in obs_slits:
         #confirmed
-        print '255728:8 is ugly compared to 255761:9 : using only the latter'
+        print('255728:8 is ugly compared to 255761:9 : using only the latter')
         obs,slit='255761:9'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255728:24' in obs_slits:
-        print '255728:24 et 255763:33 are very problematic, keeping 255728:24 for now'
+        print('255728:24 et 255763:33 are very problematic, keeping 255728:24 for now')
         obs,slit='255728:24'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     # elif '255720-25fits:32' in obs_slits:
@@ -466,19 +463,19 @@ def check_specifics(obs_slits,spec, datadir, show, save, savedir):
     #     obs,slit='255720-25fits:46'.split(':')
     #     x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255726:6' in obs_slits:
-        print '255726:6 is ugly compared to 255752-59-60:22 : using only the latter'
+        print('255726:6 is ugly compared to 255752-59-60:22 : using only the latter')
         obs,slit='255752-59-60:22'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255726:5' in obs_slits:
-        print '255726:5 is ugly compared to 255734fits:16 : using only the latter'
+        print('255726:5 is ugly compared to 255734fits:16 : using only the latter')
         obs,slit='255734fits:16'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255744_46_47:34' in obs_slits:
-        print '255744_46_47:34 is ugly compared to 255720-25fits:43 : using only the latter'
+        print('255744_46_47:34 is ugly compared to 255720-25fits:43 : using only the latter')
         obs,slit='255720-25fits:43'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255739-43:36' in obs_slits:
-        print '255739-43:36 is ugly compared to 255720-25fits:37 : using only the latter'
+        print('255739-43:36 is ugly compared to 255720-25fits:37 : using only the latter')
         obs,slit='255720-25fits:37'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     # elif '255739-43:30a' in obs_slits:
@@ -487,113 +484,113 @@ def check_specifics(obs_slits,spec, datadir, show, save, savedir):
     #     x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255726:7' in obs_slits:
         #confirmed
-        print '255726:7 is ugly compared to 255750:37 : using only the latter'
+        print('255726:7 is ugly compared to 255750:37 : using only the latter')
         obs,slit='255750:37'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255748:7m' in obs_slits:
-        print '255750/SPEC6 unfound but used in 255748/SPEC7_6, renamed SPEC7m'
+        print('255750/SPEC6 unfound but used in 255748/SPEC7_6, renamed SPEC7m')
         obs,slit='255748:7m'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255748:9m' in obs_slits:
-        print '255750/SPEC8 unfound but used in 255748/SPEC9_8, renamed SPEC9m'
+        print('255750/SPEC8 unfound but used in 255748/SPEC9_8, renamed SPEC9m')
         obs,slit='255748:9m'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255748:11m' in obs_slits:
-        print '255750/SPEC10 unfound but used in 255748/SPEC11_10, renamed SPEC11m'
+        print('255750/SPEC10 unfound but used in 255748/SPEC11_10, renamed SPEC11m')
         obs_slits.remove('255750:10')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255750:24m' in obs_slits:
-        print '255748/SPEC26 unfound but used in 255750/SPEC24m'
+        print('255748/SPEC26 unfound but used in 255750/SPEC24m')
         obs,slit='255750:24m'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255748:27m' in obs_slits:
-        print '255750/SPEC25 unfound but used in 255748/SPEC27m'
+        print('255750/SPEC25 unfound but used in 255748/SPEC27m')
         obs,slit='255748:27m'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255761:38am' in obs_slits:
-        print '255763/SPEC36a unfound but used in 255761/SPEC38am'
+        print('255763/SPEC36a unfound but used in 255761/SPEC38am')
         obs,slit='255761:38am'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255761:38bm' in obs_slits:
-        print '255763/SPEC36b unfound but used in 255761/SPEC38bm'
+        print('255763/SPEC36b unfound but used in 255761/SPEC38bm')
         obs,slit='255761:38bm'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255744_46_47:13' in obs_slits:
-        print '255739-43/SPEC12 unfound, using only 255744_46_47/SPEC13'
+        print('255739-43/SPEC12 unfound, using only 255744_46_47/SPEC13')
         obs,slit='255744_46_47:13'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255728:31' in obs_slits:
-        print '255744_46_47:42 unfound, using only 255728:31'
+        print('255744_46_47:42 unfound, using only 255728:31')
         obs,slit='255728:31'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255754-58fits:5m' in obs_slits:
-        print '255752-59-60:5 unfound but used in 255754-58fits:5m'
+        print('255752-59-60:5 unfound but used in 255754-58fits:5m')
         obs,slit='255754-58fits:5m'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255754-58fits:16' in obs_slits:
-        print '255752-59-60:17 unfound, using only 255754-58fits:16'
+        print('255752-59-60:17 unfound, using only 255754-58fits:16')
         obs,slit='255754-58fits:16'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255752-59-60:13' in obs_slits:
-        print '255752-59-60:13 includes 255734fits:29 and 255738:27'
+        print('255752-59-60:13 includes 255734fits:29 and 255738:27')
         obs,slit='255752-59-60:13'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255752-59-60:23' in obs_slits:
-        print '255752-59-60:23 not found, merging 255754-58fits:24 and 255744_46_47:11'
+        print('255752-59-60:23 not found, merging 255754-58fits:24 and 255744_46_47:11')
         obs_slits.remove('255752-59-60:23')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:31' in obs_slits:
-        print '255752-59-60:31 not found, merging 255720-25fits:29 and 255739-43:15'
+        print('255752-59-60:31 not found, merging 255720-25fits:29 and 255739-43:15')
         obs_slits.remove('255752-59-60:31')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:10' in obs_slits:
-        print '255752-59-60:10 not found, and  255754-58fits:10m includes 255734fits:28, merging 255754-58fits, 255730-33:27, and 255738:26'
+        print('255752-59-60:10 not found, and  255754-58fits:10m includes 255734fits:28, merging 255754-58fits, 255730-33:27, and 255738:26')
         obs_slits.remove('255752-59-60:10')
         obs_slits.remove('255734fits:28')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:2' in obs_slits:
-        print '255752-59-60:2 not found, merging 255763:1 and 255761:1'
+        print('255752-59-60:2 not found, merging 255763:1 and 255761:1')
         obs_slits.remove('255752-59-60:2')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:3' in obs_slits:
-        print '255752-59-60:3 not found, merging 255752-59-60:3, 255763:2 and 255761:2'
+        print('255752-59-60:3 not found, merging 255752-59-60:3, 255763:2 and 255761:2')
         obs_slits.remove('255752-59-60:3')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:19' in obs_slits:
-        print '255752-59-60:19 not found, merging 255726:12, 255763:17 and 255761:16'
+        print('255752-59-60:19 not found, merging 255726:12, 255763:17 and 255761:16')
         obs_slits.remove('255752-59-60:19')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255752-59-60:11' in obs_slits:
-        print '255752-59-60:11 not found, merging 255720-25fits:4 and 255730-33:6'
+        print('255752-59-60:11 not found, merging 255720-25fits:4 and 255730-33:6')
         obs_slits.remove('255752-59-60:11')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255748:47' in obs_slits:
-        print '255748:47 not found, merging 255754-58fits:37 and 255750:45'
+        print('255748:47 not found, merging 255754-58fits:37 and 255750:45')
         obs_slits.remove('255748:47')
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255726:3' in obs_slits:
-        print '255726:3 discarded, merging 255750:3 and 255761:20N'
+        print('255726:3 discarded, merging 255750:3 and 255761:20N')
         obs_slits.remove('255726:3')
         #obs_slits = ['255750:3','255761:20N','255726:3']
-        do_merge(obs_slits, spec, datadir, show, save, savedir)
+        do_merge(obs_slits, spec, datadir, show, save, savedir, workdir)
     elif '255750:13' in obs_slits:
-        print '255750:13 not found, using only 255748:14'
+        print('255750:13 not found, using only 255748:14')
         obs,slit='255748:14'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255754-58fits:14' in obs_slits:
         obs_slits=['255750:11','255739-43:20','255744_46_47:21','255748:12m','255754-58fits:14']
     elif '255750:25' in obs_slits:
-        print '255750:25 not found, using only 255748:27'
+        print('255750:25 not found, using only 255748:27')
         obs,slit='255748:27'.split(':')
         x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show, save, savedir)
     elif '255750:38' in obs_slits:
-        print '255750:38 and 255748:40 not found, SPEC id %s results missing'%str(spec)
+        print('255750:38 and 255748:40 not found, SPEC id %s results missing'%str(spec))
     else:
         return False
     return True
 
 def obs_cmp(obs_slit1, obs_slit2):
-    print obs_slit1, obs_slit2
+    print(obs_slit1, obs_slit2)
     obs1,slit1 = obs_slit1.split(':')
     obs2,slit2 = obs_slit2.split(':')
     if obs1=='255720-25fits' and obs2=='255730-33':
@@ -626,14 +623,14 @@ def obs_cmp(obs_slit1, obs_slit2):
     return -1
         
     
-def do_merge(obs_slits, spec, datadir, show, save, savedir):
+def do_merge(obs_slits, spec, datadir, show, save, savedir, workdir):
     obs_weight = {"255706":1, "255708":1, "255712":1, "255714":1, "255716":1, "255718":1, "255720-25fits":5, '255726':1,'255728':1,"255730-33":3, "255734fits":1, '255744_46_47':3,"255754-58fits":1, "255750":1, "255763":1, "255748":1, "255761":1, "255738":1, "255739-43":4, "255752-59-60":3, "255744-45-47":3}
     if len(obs_slits)>=2:
         #in case of more than 2 spectra to merge, order may help,
         #so try here to put some order in the chaos.
-        print "list before compare: ",obs_slits
+        print("list before compare: ",obs_slits)
         obs_slits = sorted(obs_slits, cmp=obs_cmp, reverse=True)
-        print "list after compare: ",obs_slits
+        print("list after compare: ",obs_slits)
     filenames = []
     weights = []
     obses = []
@@ -643,9 +640,9 @@ def do_merge(obs_slits, spec, datadir, show, save, savedir):
         if not os.path.exists(filename):
             filename = os.path.join(datadir,obs,'SPEC%s.txt'%slit)
             if not os.path.exists(filename):
-                print "%s not found"%filename
+                print("%s not found"%filename)
             else:
-                tmp_n=os.path.join(savedir,'to_be_merged',"%s_%s_%sn.txt"%(spec,obs,slit))
+                tmp_n=os.path.join(workdir,'to_be_merged',"%s_%s_%sn.txt"%(spec,obs,slit))
                 if not os.path.exists(tmp_n):
                     do_normalize(filename, out=tmp_n)
                 filenames.append(tmp_n)
@@ -655,49 +652,89 @@ def do_merge(obs_slits, spec, datadir, show, save, savedir):
             filenames.append(filename)
             weights.append(obs_weight[obs])
             obses.append(obs)
-    print filenames
+    print(filenames)
     merge_files(filenames, obses, weights,spec,z,lines,show, save, savedir)
     return
+
+def configure():
+    import optparse, yaml
     
-if __name__=="__main__":
-    import yaml, sys
-    config_file = 'config2.yaml'
-    map_table = 'spec_table.yaml'
-    if len(sys.argv)>1:
-        config_file = sys.argv[1]
-    if len(sys.argv)>2:
-        map_table = sys.argv[2]
-    
+    parser = optparse.OptionParser(
+        usage=
+        """
+        %spec_builder
+        Run the spec building out of fors2 spec repository
+        """)
+    parser.add_option('-c', '--config', default='config2.yaml', action='store',
+                      help='Configuration file')
+    parser.add_option('-t', '--table', default='spec_table.yaml', action='store',
+                      help='Spec table')
+    parser.add_option('-o', '--obs_list', default=None, action='store',
+                      help='List of obs numbers, separated by a comma')
+    parser.add_option('-i', '--specid_list', default=None, action='store',
+                      help='List of spec ids, separated by a comma, or a range: range(a,b)')
+    parser.add_option('-n', '--no_merge', default=False, action='store',
+                      help='Do not run on merging cases')
+    parser.add_option('-m', '--merge_only', default=False, action='store',
+                      help='Only run on merging cases')
+    parser.add_option('-s', '--save', default=False, action='store',
+                      help='Save data files and spec images')
+    parser.add_option('-S', '--show', default=True, action='store',
+                      help='Show spec images')
+    parser.add_option('-w', '--workdir', default=None, action='store',
+                      help='Working directory where files are saved')
+    parser.add_option('-d', '--savedir', default=None, action='store',
+                      help='Saving directory where files are saved')
+    (options, args) = parser.parse_args()
     
     #load the config yaml:
-    config = yaml.load(open(config_file,'r'))
-    datadir=config['datadir']
-    workdir=config['workdir']
-    catfile = config['fors2catalog']
-    cat = fits.open(catfile)[1]
+    config = yaml.load(open(options.config,'r'))
+    options.datadir = config['datadir']
+    if options.workdir is None:
+        options.workdir = config['workdir']
+    if options.savedir is None:
+        options.savedir = options.workdir
+    if not os.path.exists(options.workdir):
+        os.mkdir(options.workdir)
+    if not os.path.exists(options.savedir):
+        os.mkdir(options.savedir)
+    options.catfile = config['fors2catalog']
+    return (options, args)
+
+if __name__=="__main__":
+    import yaml, sys
+
+    options, args = configure()
+    
+    cat = fits.open(options.catfile)[1]
     
     #load the master table of fors2 identifiers : obs/slit_id vs spec_id mappings
-    maptable = yaml.load(open(map_table,'r'))
+    maptable = yaml.load(open(options.table,'r'))
     bands = maptable['mask_bands']
     obs_dict = maptable['fors2_obs']
-    obs_list = obs_dict.keys()
-    if len(sys.argv)>3:
-        obs_list = sys.argv[3].split(",")
+    if options.obs_list is None:
+        obs_list = obs_dict.keys()
+#    if len(sys.argv)>3:
+    else:
+        obs_list = options.obs_list.split(",")
         
-    print("config: %s\nmapping: %s\nobservations: %s\n"%(config_file,map_table,obs_list))
+    print("config: %s\nmapping: %s\nobservations: %s\n"%(options.config,options.table,obs_list))
         
-    # for obs in obs_list:
-    #     print("Running on ",obs)
-    #     new_dir=os.path.join(workdir,obs)
-    #     if not os.path.exists(new_dir):
-    #         os.mkdir(new_dir)
-    #     run_all(obs, datadir, new_dir, show=True, save=True)
-    
+    full_range = range(1,739)
+    specid_list = options.specid_list
+    if specid_list is None:
+        spec_ids = full_range
+    else:
+        if 'range' in specid_list:
+            spec_ids = eval(specid_list)
+        else:
+            spec_ids = specid_list.split(",")
 
-#    for spec in range(1,739):
-#    for spec in [272,273,274,290,293,300]:
-#    for spec in [103]:
-    for spec in range(1,10):
+    show_img = options.show
+    save_files = options.save
+    datadir = options.datadir
+    workdir = options.workdir
+    for spec in spec_ids:
         outstr = "SPEC %s: "%str(spec)
         z, lines = get_catalog_info(spec, cat)
         obs_slits=[]
@@ -710,14 +747,14 @@ if __name__=="__main__":
         
         if len(obs_slits)==0:
             outstr += 'no match'
-            print outstr
-        elif len(obs_slits)==1:
+            print(outstr)
+        elif len(obs_slits)==1 and options.merge_only==False:
             outstr += obs_slits[0]
-            print outstr
+            print(outstr)
             obs,slit=obs_slits[0].split(":")
-            x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show=False, save=True, savedir=workdir)
+            x, masked_y, z, lines_list = run_on_spec(obs, slit, spec, datadir, show=show_img, save=save_files, savedir=options.savedir)
         else:
-                already_merged = check_specifics(obs_slits,spec, datadir, show=True, save=True, savedir=workdir)
-                if not already_merged:
-                        do_merge(obs_slits, spec, datadir, show=True, save=True, savedir=workdir)
+                already_merged = check_specifics(obs_slits,spec, datadir, show=show_img, save=save_files, savedir=options.savedir, workdir=options.workdir)
+                if not already_merged and options.no_merge==False:
+                        do_merge(obs_slits, spec, datadir, show=show_img, save=save_files, savedir=options.savedir, workdir=options.workdir)
         
