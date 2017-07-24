@@ -134,7 +134,6 @@ def pretty_plot(x, y, yy, spec, z, lines, show=True, save=False, savedir='.'):
         else:
             print("%s not found"%l)
 
-
     if save==True:
         imgdir = os.path.join(savedir,'IMG')
         if not os.path.exists(imgdir):
@@ -673,19 +672,22 @@ def configure():
                       help='List of obs numbers, separated by a comma')
     parser.add_option('-i', '--specid_list', default=None, action='store',
                       help='List of spec ids, separated by a comma, or a range: range(a,b)')
-    parser.add_option('-n', '--no_merge', default=False, action='store',
+    parser.add_option('-n', '--no_merge', default=False, action='store_true',
                       help='Do not run on merging cases')
-    parser.add_option('-m', '--merge_only', default=False, action='store',
+    parser.add_option('-m', '--merge_only', default=False, action='store_true',
                       help='Only run on merging cases')
-    parser.add_option('-s', '--save', default=False, action='store',
+    parser.add_option('-s', '--save', default=True, action='store_false',
                       help='Save data files and spec images')
-    parser.add_option('-S', '--show', default=True, action='store',
+    parser.add_option('-S', '--show', default=False, action='store_true',
                       help='Show spec images')
     parser.add_option('-w', '--workdir', default=None, action='store',
                       help='Working directory where files are saved')
     parser.add_option('-d', '--savedir', default=None, action='store',
                       help='Saving directory where files are saved')
     (options, args) = parser.parse_args()
+
+    # options.show.upper()[0]=='T'
+    # options.save = options.save.upper()[0]=='T'
     
     #load the config yaml:
     config = yaml.load(open(options.config,'r'))
@@ -730,8 +732,8 @@ if __name__=="__main__":
         else:
             spec_ids = specid_list.split(",")
 
-    show_img = options.show
-    save_files = options.save
+    show_img = bool(options.show)
+    save_files = bool(options.save)
     datadir = options.datadir
     workdir = options.workdir
     for spec in spec_ids:
